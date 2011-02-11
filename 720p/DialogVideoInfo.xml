@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<window id="2003">
+	<defaultcontrol always="true">8000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- MOVIES & EPISODES INFO LABELS -->
+		<control type="group" id="1000">
+			<visible>!Window.IsActive(101)</visible>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<control type="label" id="1">
+				<posx>0</posx>
+				<posy>30</posy>
+				<height>600</height>
+				<aligny>top</aligny>
+				<font>caviarHuge</font>
+				<textcolor>Color1</textcolor>
+				<width>1500</width>
+				<wrapmultiline>true</wrapmultiline>
+				<label>[UPPERCASE][COLOR=Color4]$LOCALIZE[345][/COLOR][COLOR=Color1]$INFO[ListItem.Year][/COLOR][COLOR=Color4]$LOCALIZE[515][/COLOR][COLOR=Color1]$INFO[ListItem.Genre][/COLOR][COLOR=Color4]$LOCALIZE[20417][/COLOR][COLOR=Color1]$INFO[ListItem.Writer][/COLOR][COLOR=Color4]$LOCALIZE[20339][/COLOR][COLOR=Color1]$INFO[ListItem.Director][/COLOR][COLOR=Color4]$LOCALIZE[572][/COLOR][COLOR=Color1]$INFO[Listitem.Property(mediaTag-Studio)][/COLOR][COLOR=Color4]$LOCALIZE[180][/COLOR][COLOR=Color1]$INFO[ListItem.Duration][/COLOR][COLOR=Color4]$LOCALIZE[563][/COLOR][COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]$INFO[ListItem.Plot][/UPPERCASE]</label>
+				<visible>!IsEmpty(ListItem.Year)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

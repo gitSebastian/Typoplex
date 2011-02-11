@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<window id="6">
+	<defaultcontrol always="false">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>50</views>
+	<controls>
+		<include>allscreens</include>
+		<!-- FAKE INFO TRIGGER BUTTON -->
+		<control type="button" id="8000">
+			<label>SHOULD NOT SEE ME</label>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<onleft>53</onleft>
+			<onright>53</onright>
+			<width>500</width>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<include>view_ListVideo</include>
+	</controls>
+</window>

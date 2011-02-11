@@ -1,0 +1,262 @@
+<window type="dialog" id="114">
+	<defaultcontrol always="true">15</defaultcontrol>
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
+	<controls>
+
+<!---------- INFO IS ACTIVE -------------------->
+	
+		<control type="group" id="213">
+			<posy>670</posy>
+			<include>open_PlayerControls</include>
+			<!-- BUTTONS BG -->
+			<control type="group">
+				<include>state_OSD</include>
+				<!-- bg duration -->
+				<control type="label">
+					<posx>75</posx>
+					<posy>-21</posy>
+					<label>=</label>
+					<font>osdBg</font>
+					<textcolor>Color6</textcolor>
+				</control>
+				<!-- bg shuffle -->
+				<control type="label">
+					<posx>219</posx>
+					<label>+</label>
+					<font>osdBg</font>
+					<textcolor>Color6</textcolor>
+				</control>
+				<!-- bg previous -->
+				<control type="label">
+					<posx>363</posx>
+					<label>+</label>
+					<font>osdBg</font>
+					<textcolor>Color4</textcolor>
+				</control>
+				<!-- bg rewind -->
+				<control type="label">
+					<posx>449</posx>
+					<label>+</label>
+					<font>osdBg</font>
+					<textcolor>Color4</textcolor>
+				</control>
+				<!-- bg play -->
+				<control type="label">
+					<posx>535</posx>
+					<width>600</width>
+					<label>+</label>
+					<font>osdBg</font>
+					<textcolor>Color4</textcolor>
+				</control>
+				<!-- bg forward -->
+				<control type="label">
+					<posx>621</posx>
+					<width>600</width>
+					<label>+</label>
+					<font>osdBg</font>
+					<textcolor>Color4</textcolor>
+				</control>
+				<!-- bg next -->
+				<control type="label">
+					<posx>707</posx>
+					<label>+</label>
+					<font>osdBg</font>
+					<textcolor>Color4</textcolor>
+				</control>
+				<!-- bg stop -->
+				<control type="label">
+					<posx>794</posx>
+					<label>+</label>
+					<font>osdBg</font>
+					<textcolor>Color4</textcolor>
+				</control>
+				<!-- bg repeat -->
+				<control type="label">
+					<posx>938</posx>
+					<label>+</label>
+					<font>osdBg</font>
+					<textcolor>Color6</textcolor>
+				</control>
+			</control>
+			<control type="group">
+				<posx>110</posx>
+				<posy>-6</posy>
+				<control type="label" id="1">
+					<posx>10</posx>
+					<posy>-42</posy>
+					<width>200</width>
+					<align>left</align>
+					<font>small</font>
+					<label>$INFO[Player.Time]</label>
+					<textcolor>Color1</textcolor>
+				</control>
+				<control type="label" id="1">
+					<posx>10</posx>
+					<posy>4</posy>
+					<width>200</width>
+					<align>left</align>
+					<font>small</font>
+					<label>$INFO[Player.Duration]</label>
+					<textcolor>Color1</textcolor>
+				</control>
+				<!-- shuffle -->
+				<control type="button" id="20">
+					<posy>0</posy>
+					<posx>150</posx>
+					<width>48</width>
+					<height>48</height>
+					<onleft>19</onleft>
+					<onright>13</onright>
+					<label>SHUFFLE</label>
+					<font>plot</font>
+					<textcolor>Color1</textcolor>
+					<focusedcolor>Color5</focusedcolor>
+					<onclick>XBMC.PlayerControl(Random)</onclick>
+				</control>
+				<control type="group">
+					<posy>-11</posy>
+					<posx>235</posx>
+					<control type="label">
+						<width>48</width>
+						<height>48</height>
+						<label>OFF</label>
+						<font>plot</font>
+						<textcolor>Color1</textcolor>
+						<visible>!Playlist.IsRandom</visible>
+					</control>
+					<control type="label">
+						<width>48</width>
+						<height>48</height>
+						<label>ON</label>
+						<font>plot</font>
+						<textcolor>Color1</textcolor>
+						<visible>Playlist.IsRandom</visible>
+					</control>
+				</control>
+				<control type="button" id="13">
+					<posx>330</posx>
+					<posy>0</posy>
+					<width>48</width>
+					<height>48</height>
+					<onleft>20</onleft>
+					<onright>14</onright>
+					<label>PREV</label>
+					<font>plot</font>
+					<textcolor>Color1</textcolor>
+					<focusedcolor>Color5</focusedcolor>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="14">
+					<posx>420</posx>
+					<posy>0</posy>
+					<width>48</width>
+					<height>48</height>
+					<onleft>13</onleft>
+					<onright>15</onright>
+					<label>RWD</label>
+					<font>plot</font>
+					<textcolor>Color1</textcolor>
+					<focusedcolor>Color5</focusedcolor>
+					<onclick>PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="button" id="15">
+					<posx>467</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>48</height>
+					<onleft>14</onleft>
+					<onright>16</onright>
+					<align>center</align>
+					<label>PLAY</label>
+					<altlabel>PAUSE</altlabel>
+					<font>plot</font>
+					<textcolor>Color1</textcolor>
+					<alttextcolor>Color1</alttextcolor>
+					<focusedcolor>Color5</focusedcolor>
+					<onclick>PlayerControl(Play)</onclick>
+				</control>
+				<control type="button" id="16">
+					<posx>590</posx>
+					<posy>0</posy>
+					<width>48</width>
+					<height>48</height>
+					<label>FWD</label>
+					<font>plot</font>
+					<textcolor>Color1</textcolor>
+					<focusedcolor>Color5</focusedcolor>
+					<onleft>15</onleft>
+					<onright>17</onright>
+					<onclick>PlayerControl(Forward)</onclick>
+				</control>
+				<control type="button" id="17">
+					<posx>675</posx>
+					<posy>0</posy>
+					<width>48</width>
+					<height>48</height>
+					<label>NEXT</label>
+					<font>plot</font>
+					<textcolor>Color1</textcolor>
+					<focusedcolor>Color5</focusedcolor>
+					<onleft>16</onleft>
+					<onright>18</onright>
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+				<control type="button" id="18">
+					<posx>761</posx>
+					<posy>0</posy>
+					<width>48</width>
+					<height>48</height>
+					<label>STOP</label>
+					<font>plot</font>
+					<textcolor>Color1</textcolor>
+					<focusedcolor>Color5</focusedcolor>
+					<onleft>17</onleft>
+					<onright>19</onright>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<!-- repeat -->
+				<control type="button" id="19">
+					<posy>0</posy>
+					<posx>870</posx>
+					<width>48</width>
+					<height>48</height>
+					<onleft>18</onleft>
+					<onright>20</onright>
+					<label>REPEAT</label>
+					<font>plot</font>
+					<textcolor>Color1</textcolor>
+					<focusedcolor>Color5</focusedcolor>
+					<onclick>XBMC.PlayerControl(Repeat)</onclick>
+				</control>
+				<control type="group">
+					<posy>-11</posy>
+					<posx>949</posx>
+					<control type="label">
+						<width>48</width>
+						<height>48</height>
+						<label>OFF</label>
+						<font>plot</font>
+						<textcolor>Color1</textcolor>
+						<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+					</control>
+					<control type="label">
+						<width>48</width>
+						<height>48</height>
+						<label>ONE</label>
+						<font>plot</font>
+						<textcolor>Color1</textcolor>
+						<visible>Playlist.IsRepeatOne</visible>
+					</control>
+					<control type="label">
+						<width>48</width>
+						<height>48</height>
+						<label>ALL</label>
+						<font>plot</font>
+						<textcolor>Color1</textcolor>
+						<visible>Playlist.IsRepeat</visible>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

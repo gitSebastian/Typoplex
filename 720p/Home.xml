@@ -1,0 +1,524 @@
+<?xml version="1.0"?>
+<window id="0">
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
+		<!-- Home Typolex typo banner (big bauhaus title) -->
+		<control type="group">
+			<posy>0</posy>
+			<posx>60</posx>
+			<include>hide</include>
+			<include>transition2</include>
+			<control type="label">
+				<posy>350</posy>
+				<posx>147</posx>
+				<width>1200</width>
+				<label>T</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+				<visible>Window.IsActive(Home)</visible>
+			</control>
+			<control type="label">
+				<posy>350</posy>
+				<posx>253</posx>
+				<width>1200</width>
+				<label>Y</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<animation effect="fade" start="50" end="70" condition="true">Conditional</animation>
+				<visible>Window.IsActive(Home)</visible>
+			</control>
+			<control type="label">
+				<posy>350</posy>
+				<posx>350</posx>
+				<width>1200</width>
+				<label>POPLEX</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+				<visible>Window.IsActive(Home)</visible>
+			</control>
+			<control type="label">
+				<posy>210</posy>
+				<posx>307</posx>
+				<width>1200</width>
+				<label>I</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<animation effect="fade" start="50" end="70" condition="true">Conditional</animation>
+				<visible>Window.IsActive(Home)</visible>
+			</control>
+			<control type="label">
+				<posy>490</posy>
+				<posx>269</posx>
+				<width>1200</width>
+				<label>I</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<animation effect="fade" start="50" end="70" condition="true">Conditional</animation>
+				<visible>Window.IsActive(Home)</visible>
+			</control>
+		</control>
+		<!-- Dynamic PMS Sections -->
+		<control type="fixedlist" id="300">
+			<posx>350</posx>
+			<posy>90</posy>
+			<width>900</width>
+			<height>550</height>
+			<onup>300</onup>
+			<ondown>300</ondown>
+			<onleft>9000</onleft>
+			<onright>-</onright>
+			<orientation>vertical</orientation>
+			<focusposition>3</focusposition>
+			<wraparound>true</wraparound>
+			<scrolltime>250</scrolltime>
+			<include>transition2</include>
+			<animation effect="fade" start="100" end="0" time="350" condition="ControlGroup(200).HasFocus() | ControlGroup(9000).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1120) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160) | Window.IsActive(134)">Conditional</animation>
+			<itemlayout width="560" height="60">
+				<control type="group">
+					<posx>120</posx>
+					<posy>0</posy>
+					<animation effect="fade" start="100" end="90" time="350" condition="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="80" time="0" center="auto" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>45</posx>
+						<posy>0</posy>
+						<label>$INFO[ListItem.Label]</label>
+						<font>georgiaBigTitle</font>
+						<textcolor>Color4</textcolor>
+						<align>left</align>
+						<width>1100</width>
+						<include>listMenu</include>
+					</control>
+				</control>
+			</itemlayout>
+			<!-- Focused Item -->
+			<focusedlayout width="560" height="200">
+				<control type="group" id="5555">
+					<animation effect="zoom" start="100" end="82" time="0" center="auto" condition="true">Conditional</animation>
+					<control type="label">
+						<posx>100</posx>
+						<posy>75</posy>
+						<label>$INFO[ListItem.Label]</label>
+						<font>georgiaBigTitle</font>
+						<textcolor>Color1</textcolor>
+						<align>left</align>
+						<width>1100</width>
+						<include>focus_Banner</include>
+					</control>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>Programs</description>
+					<label>$LOCALIZE[0]</label>
+					<onclick>ActivateWindow(Programs)</onclick>
+					<include>focus_Banner</include>
+				</item>
+				<item id="99">
+					<label>31976</label>
+					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
+					<include>focus_Banner</include>
+				</item>
+				<item id="9">
+					<description>Favorites</description>
+					<label>$LOCALIZE[1036]</label>
+					<onclick>ActivateWindow(134)</onclick>
+					<include>focus_Banner</include>
+				</item>
+			</content>
+		</control>
+		<!-- NEW LEFT SIDE HOME MENU -->
+		<control type="group" id="9000">
+			<posx>220</posx>
+			<posy>150</posy>
+			<width>400</width>
+			<height>650</height>
+			<orientation>vertical</orientation>
+			<scrolltime>150</scrolltime>
+			<include>hide</include>
+			<include>transition2</include>
+			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>
+			<animation effect="fade" start="100" end="30" time="350" condition="Control.HasFocus(300)">Conditional</animation>
+			<!-- iTunes shortcuts -->
+			<control type="button" id="9009">
+				<posx>35</posx>
+				<posy>0</posy>
+				<onup>9016</onup>
+				<ondown>9010</ondown>
+				<onright>200</onright>
+				<onleft>300</onleft>
+				<label>iTunes</label>
+				<onclick>Plex.ActivateWindow(10501,http://127.0.0.1:32400/music/iTunes/,return)</onclick>
+				<font>bauhausNormal</font>
+				<textcolor>Color4</textcolor>
+				<focusedcolor>Color1</focusedcolor>
+				<align>right</align>
+			</control>
+			<!-- Plug-Ins -->
+			<control type="button" id="9010">
+				<posx>35</posx>
+				<posy>30</posy>
+				<onup>9009</onup>
+				<ondown>9012</ondown>
+				<onright>200</onright>
+				<onleft>300</onleft>
+				<label>31914</label>
+				<onclick>SetFocus(1110)</onclick>
+				<font>bauhausNormal</font>
+				<textcolor>Color4</textcolor>
+				<focusedcolor>Color1</focusedcolor>
+				<align>right</align>
+			</control>
+			<!-- Weather -->
+			<control type="button" id="9012">
+				<posx>35</posx>
+				<posy>60</posy>
+				<onup>9010</onup>
+				<ondown>9013</ondown>
+				<onright>300</onright>
+				<onleft>300</onleft>
+				<label>$LOCALIZE[8]</label>
+				<onclick>ActivateWindow(weathersettings)</onclick>
+				<font>bauhausNormal</font>
+				<textcolor>Color4</textcolor>
+				<focusedcolor>Color1</focusedcolor>
+				<align>right</align>
+			</control>
+			<!-- Now Playing Audio -->
+			<control type="button" id="9013">
+				<posx>0</posx>
+				<posy>305</posy>
+				<onup>9012</onup>
+				<ondown>9014</ondown>
+				<onright>300</onright>
+				<onleft>300</onleft>
+				<label>$LOCALIZE[13350]</label>
+				<onclick>ActivateWindow(50)</onclick>
+				<visible>Player.HasAudio + !Player.HasVideo</visible>
+				<font>bauhausNormal</font>
+				<textcolor>Color4</textcolor>
+				<focusedcolor>Color1</focusedcolor>
+				<align>right</align>
+			</control>
+			<!-- Now Playing Video -->
+			<control type="button" id="9014">
+				<posx>0</posx>
+				<posy>305</posy>
+				<onup>9013</onup>
+				<ondown>9015</ondown>
+				<onright>300</onright>
+				<onleft>300</onleft>
+				<label>$LOCALIZE[13350]</label>
+				<onclick>ActivateWindow(videoplaylist)</onclick>
+				<visible>Player.HasVideo + !Player.HasAudio</visible>
+				<font>bauhausNormal</font>
+				<textcolor>Color4</textcolor>
+				<focusedcolor>Color1</focusedcolor>
+				<align>right</align>
+			</control>
+			<!-- About -->
+			<control type="button" id="9014">
+				<posx>0</posx>
+				<posy>335</posy>
+				<onup>9013</onup>
+				<ondown>9015</ondown>
+				<onright>300</onright>
+				<onleft>300</onleft>
+				<label>About Typoplex</label>
+				<onclick>Skin.ToggleSetting(aboutTypoplex)</onclick>
+				<font>bauhausNormal</font>
+				<textcolor>Color4</textcolor>
+				<focusedcolor>Color1</focusedcolor>
+				<align>right</align>
+			</control>
+			<!-- Settings window "screen" -->
+			<control type="button" id="9015">
+				<posx>0</posx>
+				<posy>365</posy>
+				<onup>9014</onup>
+				<ondown>9016</ondown>
+				<onright>200</onright>
+				<onleft>300</onleft>
+				<label>$LOCALIZE[5]</label>
+				<font>bauhausNormal</font>
+				<textcolor>Color4</textcolor>
+				<focusedcolor>Color1</focusedcolor>
+				<align>right</align>
+			</control>
+			<!-- Exit -->
+			<control type="button" id="9016">
+				<posx>0</posx>
+				<posy>395</posy>
+				<onup>9015</onup>
+				<ondown>9009</ondown>
+				<onright>200</onright>
+				<onleft>300</onleft>
+				<label>$LOCALIZE[31013]</label>
+				<onclick>SetFocus(1160)</onclick>
+				<font>bauhausNormal</font>
+				<textcolor>Color4</textcolor>
+				<focusedcolor>Color1</focusedcolor>
+				<align>right</align>
+			</control>
+		</control>
+		<!-- about Typoplex -->
+		<control type="textbox" id="8">
+			<include>hide</include>
+			<posx>425</posx>
+			<posy>452</posy>
+			<width>640</width>
+			<height>240</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>[COLOR=Color1]Typoplex[/COLOR] design, coding and everything else by [COLOR=Color1]Sebastian[/COLOR] (se.bastian).[CR]
+				Come talk about it on the [COLOR=Color1]Plex[/COLOR] forums, Skins section. There you can follow
+				the latest news and updates, and leave feedback and suggestions. Keep Typoplex
+				updated by downloading always the latest version on [COLOR=Color1]gitHub[/COLOR].[CR][COLOR=Color1]Thank you[/COLOR] for 
+				considering Typoplex to be worthy of your delicate eyes.</label>
+			<textcolor>Color4</textcolor>
+			<font>bauhausNormal</font>
+			<visible>Control.HasFocus(9014)</visible>
+			<animation effect="fade" start="0" end="100" time="550" condition="Control.HasFocus(9014)">Conditional</animation>
+		</control>
+		<!-- SUB-LEVEL -->
+		<control type="group">
+			<include>hide</include>
+			<posx>430</posx>
+			<posy>150</posy>
+			<width>850</width>
+			<height>595</height>
+			<!-- iTunes shortcuts -->
+			<control type="grouplist" id="200">
+				<onleft>9000</onleft>
+				<onright>300</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>-10</itemgap>
+				<visible>!Control.HasFocus(300) + ControlGroup(9000).HasFocus(9009)</visible>
+				<animation effect="fade" start="0" end="100" time="350" condition="!Control.HasFocus(300) + ControlGroup(9000).HasFocus(9009)">Conditional</animation>
+				<include>transition2</include>
+				<control type="button" id="221">
+					<label>go to Playlist now playing</label>
+					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+					<visible>Player.HasAudio</visible>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+				<control type="button" id="223">
+					<description>go to iTunes playlists</description>
+					<label>go to playlists</label>
+					<onclick>ActivateWindow(10501,plex://127.0.0.1:32400/music/iTunes/Playlists,return)</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+				<control type="button" id="224">
+					<description>go to Artists</description>
+					<label>go to Artists</label>
+					<label>Artists</label>
+					<onclick>ActivateWindow(10501,plex://127.0.0.1:32400/music/iTunes/Artists,return)</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+				<control type="button" id="226">
+					<description>go to iTunes main entry</description>
+					<label>go to iTunes main entry</label>
+					<onclick>ActivateWindow(10501,plex://127.0.0.1:32400/music/iTunes,return)</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+			</control>
+			<!-- Plug-Ins sub-menu -->
+			<control type="grouplist" id="200">
+				<onleft>9000</onleft>
+				<onright>300</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>-10</itemgap>
+				<visible>!Control.HasFocus(300) + ControlGroup(9000).HasFocus(9010)</visible>
+				<animation effect="fade" start="0" end="100" time="350" condition="!Control.HasFocus(300) + ControlGroup(9000).HasFocus(9010)">Conditional</animation>
+				<include>transition2</include>
+				<control type="button" id="281">
+					<description>go to Video Plug-Ins</description>
+					<label>go to Video Plug-Ins</label>
+					<onclick>ActivateWindow(6)</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+				<control type="button" id="282">
+					<description>go to Music Plug-Ins</description>
+					<label>go to Music Plug-Ins</label>
+					<onclick>ActivateWindow(MyMusic)</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+				<control type="button" id="283">
+					<description>go to Picture Plug-Ins</description>
+					<label>go to Picture Plug-Ins</label>
+					<onclick>ActivateWindow(2)</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+			</control>
+			<!-- Weather sub-menu -->
+			<control type="grouplist" id="200">
+				<posx>0</posx>
+				<posy>61</posy>
+				<onleft>9012</onleft>
+				<onright>300</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>0</itemgap>
+				<visible>!Control.HasFocus(300) + ControlGroup(9000).HasFocus(9012)</visible>
+				<animation effect="fade" start="0" end="100" time="350" condition="!Control.HasFocus(300) + ControlGroup(9000).HasFocus(9012)">Conditional</animation>
+				<include>transition2</include>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<posx>50</posx>
+					<width min="29" max="800">auto</width>
+					<height>300</height>
+					<font>mediumLow</font>
+					<textcolor>Color1</textcolor>
+					<itemgap>-10</itemgap>
+					<control type="grouplist">
+						<height>190</height>
+						<aligny>center</aligny>
+						<width min="29" max="400">auto</width>
+						<orientation>vertical</orientation>
+						<control type="label" id="22">
+							<info>Weather.Conditions</info>
+							<width min="29" max="500">auto</width>
+							<font>bauhausNormal</font>
+							<textcolor>Color4</textcolor>
+							<focusedcolor>Color1</focusedcolor>
+						</control>
+						<control type="grouplist">
+							<height>50</height>
+							<aligny>center</aligny>
+							<orientation>horizontal</orientation>
+							<control type="label">
+								<label>$LOCALIZE[31101] :</label>
+								<width min="29" max="250">auto</width>
+								<font>bauhausNormal</font>
+								<textcolor>Color4</textcolor>
+								<focusedcolor>Color1</focusedcolor>
+							</control>
+							<control type="label" id="23">
+								<info>Weather.Temperature</info>
+								<width min="29" max="500">auto</width>
+								<font>bauhausNormal</font>
+								<textcolor>Color4</textcolor>
+								<focusedcolor>Color1</focusedcolor>
+							</control>
+						</control>
+					</control>
+				</control>
+			</control>
+			<!-- Settings shortcuts -->
+			<control type="grouplist" id="200">
+				<posx>-30</posx>
+				<posy>305</posy>
+				<onleft>9015</onleft>
+				<onright>300</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>-10</itemgap>
+				<visible>!Control.HasFocus(300) + ControlGroup(9000).HasFocus(9015)</visible>
+				<animation effect="fade" start="0" end="100" time="350" condition="!Control.HasFocus(300) + ControlGroup(9000).HasFocus(9015)">Conditional</animation>
+				<include>transition2</include>
+				<control type="button" id="262">
+					<description>go to Plex Appearence Settings</description>
+					<label>Appearence</label>
+					<onclick>ActivateWindow(appearancesettings)</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+				<control type="button" id="263">
+					<description>go to Plex Video Settings</description>
+					<label>Video</label>
+					<onclick>ActivateWindow(videossettings)</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+				<control type="button" id="264">
+					<description>go to Plex Audio Settings</description>
+					<label>Audio</label>
+					<onclick>ActivateWindow(musicsettings)</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+				<control type="button" id="265">
+					<description>go to Plex Picture Settings</description>
+					<label>Picture</label>
+					<onclick>ActivateWindow(picturessettings)</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+				<control type="button" id="266">
+					<description>go to Plex System Settings</description>
+					<label>System</label>
+					<onclick>ActivateWindow(systemsettings)</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+			</control>
+			<!-- Exit sub-menu -->
+			<control type="grouplist" id="200">
+				<posx>-30</posx>
+				<posy>335</posy>
+				<onleft>9016</onleft>
+				<onright>300</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>-10</itemgap>
+				<visible>!Control.HasFocus(300) + ControlGroup(9000).HasFocus(9016)</visible>
+				<animation effect="fade" start="0" end="100" time="350" condition="!Control.HasFocus(300) + ControlGroup(9000).HasFocus(9016)">Conditional</animation>
+				<include>transition2</include>
+				<control type="button" id="291">
+					<description>Quit Plex</description>
+					<label>Quit Plex</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>dialog.close(all,true)</onclick>
+					<onclick>Plex.Shutdown()</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+				<control type="button" id="292">
+					<description>Sleep System</description>
+					<label>Sleep System</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>XBMC.SleepSystem()</onclick>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+				<control type="button" id="293">
+					<description>Shutdown System</description>
+					<label>Shutdown System</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>XBMC.ShutDownSystem()</onclick>
+					<visible>System.CanSuspend</visible>
+					<font>bauhausNormal</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>Color1</focusedcolor>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

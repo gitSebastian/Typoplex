@@ -1,0 +1,69 @@
+﻿<?xml version="1.0"?>
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="button" id="10">
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<animation effect="fade" delay="7000" end="0">Focus</animation>
+		</control>
+		<!-- a bunch of dots animated, and the name at the bottom -->
+		<control type="group">
+			<posy>0</posy>
+			<posx>60</posx>
+			<include>transition2</include>
+			<control type="label">
+				<posy>350</posy>
+				<posx>147</posx>
+				<width>1200</width>
+				<label>T</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<!-- transparency is used instead of darker color, for see-through effect -->
+				<animation effect="fade" start="0" end="100" time="3000" delay="2000">WindowOpen</animation>
+			</control>
+			<control type="label">
+				<posy>350</posy>
+				<posx>253</posx>
+				<width>1200</width>
+				<label>Y</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<!-- transparency is used instead of darker color, for see-through effect -->
+				<animation effect="fade" start="0" end="50" time="500" delay="800">WindowOpen</animation>
+			</control>
+			<control type="label">
+				<posy>350</posy>
+				<posx>350</posx>
+				<width>1200</width>
+				<label>POPLEX</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<!-- transparency is used instead of darker color, for see-through effect -->
+				<animation effect="fade" start="0" end="100" time="3000" delay="2000">WindowOpen</animation>
+			</control>
+			<control type="label">
+				<posy>210</posy>
+				<posx>307</posx>
+				<width>1200</width>
+				<label>I</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<!-- transparency is used instead of darker color, for see-through effect -->
+				<animation effect="fade" start="0" end="50" time="500" delay="1300">WindowOpen</animation>
+			</control>
+			<control type="label">
+				<posy>490</posy>
+				<posx>269</posx>
+				<width>1200</width>
+				<label>I</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<!-- transparency is used instead of darker color, for see-through effect -->
+				<animation effect="fade" start="0" end="50" time="500" delay="300">WindowOpen</animation>
+			</control>
+		</control>
+	</controls>
+</window>

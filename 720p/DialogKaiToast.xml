@@ -1,0 +1,31 @@
+﻿<window id="107">
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="grouplist">
+			<posx>20</posx>
+			<posy>15</posy>
+			<height>50</height>
+			<aligny>center</aligny>
+			<width min="29" max="1250">auto</width>
+			<include>transition3</include>
+			<orientation>vertical</orientation>
+			<control type="fadelabel" id="401">
+				<description>Line 1 Label</description>
+				<font>bauhausMedium</font>
+				<textcolor>Color1</textcolor>
+				<width min="29" max="1250">auto</width>
+			</control>
+			<control type="fadelabel" id="402">
+				<description>Line 2 Label</description>
+				<font>bauhausMedium</font>
+				<align>left</align>
+				<textcolor>Color4</textcolor>
+				<width min="29" max="1250">auto</width>
+			</control>
+		</control>
+	</controls>
+</window>

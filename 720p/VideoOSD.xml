@@ -1,0 +1,261 @@
+﻿<?xml version="1.0"?>
+<window id="2901">
+	<defaultcontrol>705</defaultcontrol>
+	<controls>
+		<control type="group">
+			<visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+			<include>state_OSD</include>
+			<!-- bg favorites -->
+			<control type="label">
+				<posx>-10</posx>
+				<posy>565</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color6</textcolor>
+			</control>
+			<!-- bg audio -->
+			<control type="label">
+				<posx>133</posx>
+				<posy>565</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color6</textcolor>
+			</control>
+			<!-- bg video -->
+			<control type="label">
+				<posx>219</posx>
+				<posy>565</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color6</textcolor>
+			</control>
+			<!-- bg previous -->
+			<control type="label">
+				<posx>363</posx>
+				<posy>565</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color4</textcolor>
+			</control>
+			<!-- bg rewind -->
+			<control type="label">
+				<posx>449</posx>
+				<posy>565</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color4</textcolor>
+			</control>
+			<!-- bg play -->
+			<control type="label">
+				<posx>535</posx>
+				<posy>565</posy>
+				<width>600</width>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color4</textcolor>
+			</control>
+			<!-- bg forward -->
+			<control type="label">
+				<posx>621</posx>
+				<posy>565</posy>
+				<width>600</width>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color4</textcolor>
+			</control>
+			<!-- bg next -->
+			<control type="label">
+				<posx>707</posx>
+				<posy>565</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color4</textcolor>
+			</control>
+			<!-- bg stop -->
+			<control type="label">
+				<posx>794</posx>
+				<posy>565</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color4</textcolor>
+			</control>
+			<!-- bg dvd -->
+			<control type="label">
+				<posx>938</posx>
+				<posy>565</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color6</textcolor>
+			</control>
+			<!-- bg duration -->
+			<control type="label">
+				<posx>1084</posx>
+				<posy>586</posy>
+				<label>=</label>
+				<font>osdBg</font>
+				<textcolor>Color6</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+			<include>state_OSD</include>
+			<control type="label" id="1">
+				<posx>1243</posx>
+				<posy>558</posy>
+				<width>1320</width>
+				<align>right</align>
+				<label>$INFO[Player.Time]</label>
+				<textcolor>Color1</textcolor>
+			</control>
+			<control type="label" id="1">
+				<posx>1243</posx>
+				<posy>603</posy>
+				<width>1320</width>
+				<align>right</align>
+				<label>$INFO[Player.Duration]</label>
+				<textcolor>Color1</textcolor>
+			</control>
+		</control>
+		<control type="group" id="200">
+			<posx>110</posx>
+			<posy>560</posy>
+			<visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+			<include>state_OSD</include>
+			<control type="button" id="700">
+				<posx>-69</posx>
+				<posy>-1</posy>
+				<width>120</width>
+				<height>48</height>
+				<label>FAVORITES</label>
+				<font>plot</font>
+				<textcolor>Color1</textcolor>
+				<focusedcolor>Color5</focusedcolor>
+				<onleft>709</onleft>
+				<onright>701</onright>
+				<onclick>ActivateWindow(125)</onclick>
+			</control>
+			<control type="button" id="701">
+				<posx>95</posx>
+				<posy>-1</posy>
+				<width>100</width>
+				<height>48</height>
+				<label>AUDIO</label>
+				<font>plot</font>
+				<textcolor>Color1</textcolor>
+				<focusedcolor>Color5</focusedcolor>
+				<onleft>700</onleft>
+				<onright>702</onright>
+				<onclick>ActivateWindow(124)</onclick>
+			</control>
+			<control type="button" id="702">
+				<posx>183</posx>
+				<posy>-1</posy>
+				<width>100</width>
+				<height>48</height>
+				<label>VIDEO</label>
+				<font>plot</font>
+				<textcolor>Color1</textcolor>
+				<focusedcolor>Color5</focusedcolor>
+				<onleft>701</onleft>
+				<onright>703</onright>
+				<onclick>ActivateWindow(123)</onclick>
+			</control>
+			<control type="button" id="703">
+				<posx>330</posx>
+				<posy>-1</posy>
+				<width>48</width>
+				<height>48</height>
+				<label>PREV</label>
+				<font>plot</font>
+				<textcolor>Color1</textcolor>
+				<focusedcolor>Color5</focusedcolor>
+				<onleft>702</onleft>
+				<onright>704</onright>
+				<onclick>PlayerControl(Previous)</onclick>
+			</control>
+			<control type="button" id="704">
+				<posx>420</posx>
+				<posy>-1</posy>
+				<width>48</width>
+				<height>48</height>
+				<label>RWD</label>
+				<font>plot</font>
+				<textcolor>Color1</textcolor>
+				<focusedcolor>Color5</focusedcolor>
+				<onleft>703</onleft>
+				<onright>705</onright>
+				<onclick>PlayerControl(Rewind)</onclick>
+			</control>
+			<control type="togglebutton" id="705">
+				<posx>467</posx>
+				<posy>-3</posy>
+				<width>120</width>
+				<height>48</height>
+				<align>center</align>
+				<label>PLAY</label>
+				<altlabel>PAUSE</altlabel>
+				<font>plot</font>
+				<textcolor>Color1</textcolor>
+				<alttextcolor>Color1</alttextcolor>
+				<focusedcolor>Color5</focusedcolor>
+				<onleft>704</onleft>
+				<onright>706</onright>
+				<onclick>PlayerControl(Play)</onclick>
+			</control>
+			<control type="button" id="706">
+				<posx>590</posx>
+				<posy>-1</posy>
+				<width>48</width>
+				<height>48</height>
+				<label>FWD</label>
+				<font>plot</font>
+				<textcolor>Color1</textcolor>
+				<focusedcolor>Color5</focusedcolor>
+				<onleft>705</onleft>
+				<onright>707</onright>
+				<onclick>PlayerControl(Forward)</onclick>
+			</control>
+			<control type="button" id="707">
+				<posx>675</posx>
+				<posy>-1</posy>
+				<width>48</width>
+				<height>48</height>
+				<label>NEXT</label>
+				<font>plot</font>
+				<textcolor>Color1</textcolor>
+				<focusedcolor>Color5</focusedcolor>
+				<onleft>706</onleft>
+				<onright>708</onright>
+				<onclick>PlayerControl(Next)</onclick>
+			</control>
+			<control type="button" id="708">
+				<posx>761</posx>
+				<posy>-1</posy>
+				<width>48</width>
+				<height>48</height>
+				<label>STOP</label>
+				<font>plot</font>
+				<textcolor>Color1</textcolor>
+				<focusedcolor>Color5</focusedcolor>
+				<onleft>707</onleft>
+				<onright>709</onright>
+				<onclick>PlayerControl(Stop)</onclick>
+			</control>
+			<control type="button" id="709">
+				<posx>908</posx>
+				<posy>-1</posy>
+				<width>48</width>
+				<height>48</height>
+				<label>DVD</label>
+				<font>plot</font>
+				<textcolor>Color1</textcolor>
+				<focusedcolor>Color5</focusedcolor>
+				<onleft>708</onleft>
+				<onright>700</onright>
+				<onclick>PlayerControl(ShowVideoMenu)</onclick>
+				<enable>VideoPlayer.HasMenu</enable>
+				<animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
+			</control>
+		</control>
+	</controls>
+</window>
