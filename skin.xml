@@ -2,8 +2,8 @@
 	<defaultresolution>720p</defaultresolution>
 	<defaultresolutionwide>720p</defaultresolutionwide>
 	<defaultthemename>textures.xpr</defaultthemename>
-	<version>2.0</version>
-	<effectslowdown>1</effectslowdown>
+	<version>2.10</version>
+	<effectslowdown>.75</effectslowdown>
 	<credits>
 		<skinname>Typoplex</skinname>
 		<name>Design and Coding by Sebastian</name>

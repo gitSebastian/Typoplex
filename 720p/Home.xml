@@ -97,7 +97,7 @@
 			</itemlayout>
 			<!-- Focused Item -->
 			<focusedlayout width="560" height="200">
-				<control type="group" id="5555">
+				<control type="group">
 					<animation effect="zoom" start="100" end="82" time="0" center="auto" condition="true">Conditional</animation>
 					<control type="label">
 						<posx>100</posx>
