@@ -17,4 +17,17 @@
 	<color name="Focused">FF111111</color>
 	<color name="Disabled">ff9a9a9a</color>
 	<color name="Selected">ff16871e</color>
+	
+	<!-- TYPOPLEX COLORS -->
+	<color name="orange">ffCD3700</color>
+	
+	<color name="BackgroundColor">ff141414</color>
+	<color name="semiBlack">ff141414</color>
+	<color name="darkGrey">ff1A1A1A</color>
+	<color name="ivoryBlack">ff292421</color>
+	<color name="deepRed">ff110000</color>
+	
+	<color name="ivory1">ffFFFFF0</color>
+	<color name="ivory2">ffEEEEE0</color>
+	<color name="ivory3">ffCDCDC1</color>
 </colors>

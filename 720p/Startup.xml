@@ -3,13 +3,21 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>white.png</texture>
+			<colordiffuse>BackgroundColor</colordiffuse>
+		</control>
 		<control type="button" id="10">
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<animation effect="fade" delay="7000" end="0">Focus</animation>
+			<animation effect="fade" delay="6000" end="0">Focus</animation>
 		</control>
-		<!-- a bunch of dots animated, and the name at the bottom -->
+		<!-- TYPOPLEX animation -->
 		<control type="group">
 			<posy>0</posy>
 			<posx>60</posx>
@@ -22,7 +30,17 @@
 				<font>bauhausBackTitle</font>
 				<textcolor>Color6</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="0" end="100" time="3000" delay="2000">WindowOpen</animation>
+				<animation effect="fade" start="0" end="60" time="3000" delay="1500">WindowOpen</animation>
+			</control>
+			<control type="label">
+				<posy>350</posy>
+				<posx>254</posx>
+				<width>1200</width>
+				<label>Y</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>orange</textcolor>
+				<!-- transparency is used instead of darker color, for see-through effect -->
+				<animation effect="fade" start="0" end="100" time="2500" delay="2000">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<posy>350</posy>
@@ -32,7 +50,7 @@
 				<font>bauhausBackTitle</font>
 				<textcolor>Color6</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="0" end="50" time="500" delay="800">WindowOpen</animation>
+				<animation effect="fade" start="0" end="80" time="500" delay="600">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<posy>350</posy>
@@ -42,7 +60,27 @@
 				<font>bauhausBackTitle</font>
 				<textcolor>Color6</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="0" end="100" time="3000" delay="2000">WindowOpen</animation>
+				<animation effect="fade" start="0" end="60" time="2000" delay="2000">WindowOpen</animation>
+			</control>
+			<control type="label">
+				<posy>210</posy>
+				<posx>308</posx>
+				<width>1200</width>
+				<label>I</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>orange</textcolor>
+				<!-- transparency is used instead of darker color, for see-through effect -->
+				<animation effect="fade" start="0" end="100" time="2500" delay="2000">WindowOpen</animation>
+			</control>
+			<control type="label">
+				<posy>490</posy>
+				<posx>270</posx>
+				<width>1200</width>
+				<label>I</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>orange</textcolor>
+				<!-- transparency is used instead of darker color, for see-through effect -->
+				<animation effect="fade" start="0" end="100" time="2500" delay="2000">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<posy>210</posy>
@@ -52,7 +90,7 @@
 				<font>bauhausBackTitle</font>
 				<textcolor>Color6</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="0" end="50" time="500" delay="1300">WindowOpen</animation>
+				<animation effect="fade" start="0" end="95" time="500" delay="1100">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<posy>490</posy>
@@ -62,7 +100,7 @@
 				<font>bauhausBackTitle</font>
 				<textcolor>Color6</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="0" end="50" time="500" delay="300">WindowOpen</animation>
+				<animation effect="fade" start="0" end="95" time="500" delay="300">WindowOpen</animation>
 			</control>
 		</control>
 	</controls>

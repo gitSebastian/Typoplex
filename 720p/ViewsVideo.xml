@@ -2,63 +2,76 @@
 <includes>
 	<!-- TYPOPLEX VIEWS -->
 	<include name="view_ListVideo">
-		<control type="group">
+		<control type="group">			
 			<include>transition2</include>
 			<include>fade80</include>
 			<!-- OFFSET BG CHARACTER -->
 			<!-- TV SHOWS & SEASONS, INTERMEDIARY LIBRARY, MUSIC -->
 			<control type="label">
-				<posx>100</posx>
-				<posy>400</posy>
+				<posx>400</posx>
+				<posy>350</posy>
 				<width>1300</width>
 				<align>left</align>
-				<font>offsetHuge</font>
+				<font>offsetHuge2</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>fade80</include>
-				<textcolor>Color4</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- there is a space after the label so the char won't be cut off, leave it untouched -->
-				<label>.$INFO[ListItem.SortLetter] </label>
+				<label>. $INFO[ListItem.SortLetter] </label>
 				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="10" end="20" condition="true">Conditional</animation>
+				<animation effect="fade" start="0" end="10" condition="!Container.Scrolling" time="200">Conditional</animation>
 				<visible>[Window.IsActive(501) | Window.IsActive(502)] | ![Container.Content(movies) | Container.Content(episodes) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 			</control>
 			<!-- MOVIES -->
 			<control type="label">
-				<posx>-100</posx>
-				<posy>400</posy>
+				<posx>150</posx>
+				<posy>350</posy>
 				<width>1300</width>
 				<align>left</align>
-				<font>offsetHuge</font>
+				<font>offsetHuge2</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>fade80</include>
-				<textcolor>Color4</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- there is a space after the label so the char won't be cut off, leave it untouched -->
-				<label>.$INFO[ListItem.SortLetter] </label>
+				<label>. $INFO[ListItem.SortLetter] </label>
 				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="10" end="20" condition="true">Conditional</animation>
+				<animation effect="fade" start="0" end="10" condition="!Container.Scrolling" time="200">Conditional</animation>
 				<visible>Container.Content(movies)</visible>
 			</control>
 			<!-- EPISODES -->
 			<control type="label">
-				<posx>150</posx>
-				<posy>370</posy>
+				<posx>200</posx>
+				<posy>350</posy>
 				<width>1300</width>
 				<align>left</align>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>fade80</include>
-				<font>offsetHuge</font>
-				<textcolor>Color4</textcolor>
+				<font>offsetHuge2</font>
+				<textcolor>orange</textcolor>
 				<!-- there is a space after the label so the char won't be cut off, leave it untouched -->
-				<label>.$INFO[ListItem.Episode] </label>
+				<label>. $INFO[ListItem.Episode] </label>
 				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="10" end="20" condition="true">Conditional</animation>
+				<animation effect="fade" start="0" end="10" condition="!Container.Scrolling" time="200">Conditional</animation>
 				<visible>Container.Content(episodes)</visible>
 			</control>
+			<!-- LIST ITEM ORANGE TITLES -->
+			<!-- "artist" label for song-level -->
+			<control type="label">
+				<posx>280</posx>
+				<posy>290</posy>
+				<width>700</width>
+				<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
+				<font>geoSmall</font>
+				<textcolor>orange</textcolor>
+				<selectedcolor>Color6</selectedcolor>
+				<include>focus_Banner</include>
+				<visible>Container.Content(songs)</visible>
+			</control>
 			<!-- BIG BG TITLE -->
-			<!-- TV -->
+			<!-- TELEVISION -->
 			<control type="label">
 				<posy>350</posy>
 				<posx>150</posx>
@@ -73,51 +86,6 @@
 				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
 				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 			</control>
-			<!-- MUSIC : ARTISTS, PLAYLISTS -->
-			<control type="label">
-				<posy>350</posy>
-				<posx>150</posx>
-				<width>1100</width>
-				<label>$INFO[Container.SecondTitle]</label>
-				<font>bauhausBackTitle</font>
-				<textcolor>Color6</textcolor>
-				<include>transition2</include>
-				<include>infoDialogHide</include>
-				<include>fade80</include>
-				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-				<visible>Container.Content(artists) | Container.Content(playlists) | Container.Content(albums)</visible>
-			</control>
-			<!-- iTUNES, PLUG-INS SECOND LEVEL -->
-			<control type="label">
-				<posy>350</posy>
-				<posx>150</posx>
-				<width>1100</width>
-				<label>$INFO[Container.FirstTitle]</label>
-				<font>bauhausBackTitle</font>
-				<include>transition2</include>
-				<include>infoDialogHide</include>
-				<include>fade80</include>
-				<textcolor>Color6</textcolor>
-				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-				<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(playlists)]</visible>
-			</control>
-			<!-- PLUG-INS ENTRY LEVEL-->
-			<control type="label">
-				<posy>350</posy>
-				<posx>150</posx>
-				<width>1100</width>
-				<label>PLUG-INS</label>
-				<font>bauhausBackTitle</font>
-				<include>transition2</include>
-				<include>infoDialogHide</include>
-				<include>fade80</include>
-				<textcolor>Color6</textcolor>
-				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-				<visible>Container.Content(plugins)</visible>
-			</control>
 			<!-- MOVIES & EPISODES section typo separator -->
 			<control type="group">
 				<posy>344</posy>
@@ -127,42 +95,49 @@
 				<include>fade80</include>
 				<visible>Container.Content(movies) | Container.Content(episodes)</visible>
 				<control type="label">
+					<posx>1</posx>
 					<width>1200</width>
 					<label>I</label>
 					<font>bauhausBackTitle</font>
-					<textcolor>Color4</textcolor>
+					<textcolor>orange</textcolor>
 					<!-- transparency is used instead of darker color, for see-through effect -->
-					<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+					<animation effect="fade" start="50" end="100" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>1</posx>
+					<posy>140</posy>
+					<width>1200</width>
+					<label>I</label>
+					<font>bauhausBackTitle</font>
+					<textcolor>orange</textcolor>
+					<!-- transparency is used instead of darker color, for see-through effect -->
+					<animation effect="fade" start="50" end="100" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<width>1200</width>
+					<label>I</label>
+					<font>bauhausBackTitle</font>
+					<textcolor>Color6</textcolor>
+					<!-- transparency is used instead of darker color, for see-through effect -->
+					<animation effect="fade" start="50" end="95" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
 					<posy>140</posy>
 					<width>1200</width>
 					<label>I</label>
 					<font>bauhausBackTitle</font>
-					<textcolor>Color4</textcolor>
+					<textcolor>Color6</textcolor>
 					<!-- transparency is used instead of darker color, for see-through effect -->
-					<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+					<animation effect="fade" start="50" end="95" condition="true">Conditional</animation>
 				</control>
 			</control>
 			<!-- the main list menu -->			
-			<!-- SEASON LEVEL (show name + season) -->
-			<control type="label">
-				<posx>300</posx>
-				<posy>300</posy>
-				<align>left</align>
-				<width>900</width>
-				<label>$INFO[Container.SecondTitle]</label>
-				<font>smallCaps</font>
-				<textcolor>Color1</textcolor>
-				<include>focus_Banner</include>
-				<visible>Container.Content(seasons)</visible>
-			</control>
 			<control type="fixedlist" id="50">
 				<viewtype label="535">List</viewtype>
 				<posx>0</posx>
-				<posy>12</posy>
+				<posy>90</posy>
 				<width>1260</width>
-				<height>625</height>
+				<height>550</height>
 				<onup>50</onup>
 				<ondown>50</ondown>
 				<scrolltime>250</scrolltime>
@@ -172,83 +147,67 @@
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>fade80</include>
-				<!-- TV SHOWS & SEASONS, INTERMEDIARY LIBRARY, MUSIC, VIDEO PLUG-INS UNFOCUSED ITEMS -->
-				<itemlayout condition="![Container.Content(movies) | Container.Content(episodes)]" width="560" height="65">
-					<!-- title label -->
-					<control type="label">
-						<posy>80</posy>
-						<posx>360</posx>
-						<width>700</width>
-						<label>$INFO[ListItem.Title]</label>
-						<font>regularTV</font>
-						<textcolor>Color4</textcolor>
-						<include>listMenu</include>
-					</control>
-					<!-- missing title fallback label -->
-					<control type="label">
-						<posy>80</posy>
-						<posx>360</posx>
-						<width>700</width>
-						<label>$INFO[ListItem.Label]</label>
-						<font>regularTV</font>
-						<textcolor>Color4</textcolor>
-						<visible>IsEmpty(ListItem.Title)</visible>
-						<include>listMenu</include>
+				<!-- SEASONS, INTERMEDIARY LIBRARY, MUSIC, VIDEO PLUG-INS UNFOCUSED ITEMS -->
+				<itemlayout condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(songs)]" width="1190" height="60">
+					<control type="group">
+						<posx>400</posx>
+						<posy>0</posy>
+						<animation effect="fade" start="100" end="90" time="350" condition="true">Conditional</animation>
+						<animation effect="zoom" start="100" end="80" time="0" center="auto" condition="true">Conditional</animation>
+						<!-- title label -->
+						<control type="label">
+							<posy>0</posy>
+							<posx>0</posx>
+							<width>700</width>
+							<label>$INFO[ListItem.Title]</label>
+							<font>geoMiddle</font>
+							<textcolor>Color4</textcolor>
+							<selectedcolor>orange</selectedcolor>
+							<include>listMenu</include>
+						</control>
+						<!-- missing title fallback label -->
+						<control type="label">
+							<posy>0</posy>
+							<posx>0</posx>
+							<width>700</width>
+							<label>$INFO[ListItem.Label]</label>
+							<font>geoMiddle</font>
+							<textcolor>Color4</textcolor>
+							<selectedcolor>orange</selectedcolor>
+							<visible>IsEmpty(ListItem.Title)</visible>
+							<include>listMenu</include>
+						</control>
 					</control>
 				</itemlayout>
-				<!-- TV SHOWS & SEASONS, INTERMEDIARY LIBRARY, MUSIC, VIDEO PLUG-INS FOCUSED ITEM -->
-				<focusedlayout condition="![Container.Content(movies) | Container.Content(episodes)]" width="1075" height="170">
-					<!-- SHOW LISTING LEVEL (show name) -->
-					<!-- tv show title label -->
+				<!-- SEASONS, INTERMEDIARY LIBRARY, MUSIC, VIDEO PLUG-INS FOCUSED ITEM -->
+				<focusedlayout condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(songs)]" width="1190" height="200">
+					<control type="group">
+						<animation effect="zoom" start="100" end="100" time="0" center="auto" condition="true">Conditional</animation>
+					<!-- Intermediary section -->
 					<control type="label">
-						<posx>190</posx>
-						<posy>142</posy>
-						<label>$INFO[ListItem.TVShowTitle]</label>
+						<posx>322</posx>
+						<posy>76</posy>
+						<label>[COLOR=orange][B]&#xB7;[/B][/COLOR] $INFO[ListItem.TVShowTitle]</label>
 						<textcolor>Color1</textcolor>
 						<selectedcolor>Color6</selectedcolor>
 						<align>left</align>
 						<width>1100</width>
 						<include>focus_Banner</include>
-						<font>georgiaBigTitle</font>
-						<visible>!IsEmpty(ListItem.TVShowTitle) + !Container.Content(seasons)</visible>
-					</control>
-					<!-- songs title label -->
-					<control type="label">
-						<posx>190</posx>
-						<posy>142</posy>
-						<label>$INFO[ListItem.Title]</label>
-						<textcolor>Color1</textcolor>
-						<selectedcolor>Color6</selectedcolor>
-						<align>left</align>
-						<width>1100</width>
-						<include>focus_Banner</include>
-						<font>georgiaBigTitle</font>
-						<visible>Container.Content(songs)</visible>
+						<font>geoMiddle</font>
+						<visible>![IsEmpty(ListItem.TVShowTitle) | Container.Content(songs)]</visible>
 					</control>
 					<!-- everything else title label -->
 					<control type="label">
-						<posx>190</posx>
-						<posy>142</posy>
-						<label>$INFO[ListItem.Label]</label>
+						<posx>322</posx>
+						<posy>76</posy>
+						<label>[COLOR=orange][B]&#xB7;[/B][/COLOR] $INFO[ListItem.Label]</label>
 						<textcolor>Color1</textcolor>
 						<selectedcolor>Color6</selectedcolor>
 						<align>left</align>
 						<width>1100</width>
 						<include>focus_Banner</include>
-						<font>georgiaBigTitle</font>
+						<font>geoMiddle</font>
 						<visible>IsEmpty(ListItem.TVShowTitle) + ![Container.Content(seasons) | Container.Content(songs)]</visible>
-					</control>
-					<!-- "artist" label for song-level -->
-					<control type="label">
-						<posx>140</posx>
-						<posy>95</posy>
-						<width>700</width>
-						<label>$INFO[ListItem.Artist]</label>
-						<font>smallCaps</font>
-						<textcolor>Color1</textcolor>
-						<selectedcolor>Color6</selectedcolor>
-						<include>focus_Banner</include>
-						<visible>Container.Content(songs)</visible>
 					</control>
 					<!-- "duration" label for song-level -->
 					<control type="label">
@@ -262,111 +221,170 @@
 						<include>focus_Banner</include>
 						<visible>Container.Content(songs)</visible>
 					</control>
-					<!-- "genre" label -->
-					<control type="label">
-						<posx>310</posx>
-						<posy>190</posy>
-						<width>700</width>
-						<label>$INFO[ListItem.Genre]</label>
-						<font>smallCaps</font>
-						<textcolor>Color1</textcolor>
-						<selectedcolor>Color6</selectedcolor>
-						<include>focus_Banner</include>
-						<visible>!Container.Content(songs)</visible>
+					</control>					
+				</focusedlayout>
+				<!-- TV SHOWS & SEASONS UNFOCUSED ITEMS -->
+				<itemlayout condition="Container.Content(tvshows) | Container.Content(seasons)" width="1190" height="60">
+					<control type="group">
+						<posx>400</posx>
+						<posy>0</posy>
+						<animation effect="fade" start="100" end="90" time="350" condition="true">Conditional</animation>
+						<animation effect="zoom" start="100" end="80" time="0" center="auto" condition="true">Conditional</animation>
+						<!-- title label -->
+						<control type="label">
+							<posy>0</posy>
+							<posx>0</posx>
+							<width>700</width>
+							<label>$INFO[ListItem.Title]</label>
+							<font>geoMiddle</font>
+							<textcolor>Color4</textcolor>
+							<include>listMenu</include>
+						</control>
+						<!-- missing title fallback label -->
+						<control type="label">
+							<posy>0</posy>
+							<posx>0</posx>
+							<width>700</width>
+							<label>$INFO[ListItem.Label]</label>
+							<font>geoMiddle</font>
+							<textcolor>Color4</textcolor>
+							<visible>IsEmpty(ListItem.Title)</visible>
+							<include>listMenu</include>
+						</control>
 					</control>
-					<!-- tv shows right hand "unwatched videos" label -->
+				</itemlayout>
+				<!-- TV SHOWS  & SEASONS FOCUSED ITEM -->
+				<focusedlayout condition="Container.Content(tvshows) | Container.Content(seasons)" width="1090" height="200">
+					<control type="group">
+						<animation effect="zoom" start="100" end="100" time="0" center="auto" condition="true">Conditional</animation>
+					<!-- tv show title label -->
 					<control type="label">
-						<posx>0r</posx>
-						<posy>190</posy>
-						<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360] / $INFO[ListItem.Episode]</label>
-						<font>smallCaps</font>
-						<textcolor>Color4</textcolor>
-						<selectedcolor>Color6</selectedcolor>
-						<align>right</align>
-						<width>1100</width>
-						<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
-						<include>focus_Banner</include>
-						<visible>![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
-					</control>
-					<!-- SEASON LEVEL (show name + season) -->
-					<control type="label">
-						<posx>191</posx>
-						<posy>142</posy>
-						<label>$INFO[ListItem.Label]</label>
+						<posx>322</posx>
+						<posy>76</posy>
+						<label>[COLOR=orange][B]&#xB7;[/B][/COLOR] $INFO[ListItem.TVShowTitle]</label>
 						<textcolor>Color1</textcolor>
 						<selectedcolor>Color6</selectedcolor>
 						<align>left</align>
 						<width>1100</width>
 						<include>focus_Banner</include>
-						<font>georgiaBigTitle</font>
-						<visible>Container.Content(seasons)</visible>
+						<font>geoMiddle</font>
+						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+					</control>
+					<!-- "genre" label -->
+					<control type="label">
+						<posx>400</posx>
+						<posy>130</posy>
+						<width>700</width>
+						<label>$INFO[ListItem.Genre]</label>
+						<font>smallCaps</font>
+						<textcolor>ivory3</textcolor>
+						<selectedcolor>Color6</selectedcolor>
+						<include>focus_Banner</include>
+					</control>
+					<!-- tv shows right hand "unwatched videos" label -->
+					<control type="label">
+						<posx>6r</posx>
+						<posy>130</posy>
+						<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360] / $INFO[ListItem.Episode]</label>
+						<font>smallCaps</font>
+						<textcolor>ivory3</textcolor>
+						<selectedcolor>Color6</selectedcolor>
+						<align>right</align>
+						<width>1100</width>
+						<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+						<include>focus_Banner</include>
+						<visible>![Container.Content(seasons) + IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
+					</control>
+					<!-- seasons right hand "unwatched videos" label -->
+					<control type="label">
+						<posx>6r</posx>
+						<posy>130</posy>
+						<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360] / $INFO[ListItem.Episode]</label>
+						<font>smallCaps</font>
+						<textcolor>ivory3</textcolor>
+						<selectedcolor>Color6</selectedcolor>
+						<align>right</align>
+						<width>1100</width>
+						<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+						<include>focus_Banner</include>
+						<visible>Container.Content(seasons) + ![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
+					</control>
 					</control>					
-				</focusedlayout>
+				</focusedlayout>				
 				<!-- MOVIES & EPISODES UNFOCUSED ITEMS -->
 				<itemlayout condition="Container.Content(movies) | Container.Content(episodes)" width="560" height="65">
+					<control type="group">
+						<animation effect="fade" start="100" end="90" time="350" condition="true">Conditional</animation>
+						<animation effect="zoom" start="100" end="80" time="0" center="auto" condition="true">Conditional</animation>
 					<!-- title label -->
 					<control type="label">
-						<posy>80</posy>
+						<posy>10</posy>
 						<posx>120</posx>
 						<width>600</width>
 						<label>$INFO[ListItem.Title]</label>
-						<font>regularTV</font>
+						<font>geoMiddle</font>
 						<textcolor>Color4</textcolor>
 						<include>listMenu</include>
 					</control>
 					<!-- missing title fallback label -->
 					<control type="label">
-						<posy>80</posy>
+						<posy>10</posy>
 						<posx>120</posx>
 						<width>600</width>
 						<label>$INFO[ListItem.Label]</label>
-						<font>regularTV</font>
+						<font>geoMiddle</font>
 						<textcolor>Color4</textcolor>
 						<visible>IsEmpty(ListItem.Title)</visible>
 						<include>listMenu</include>
 					</control>
 					<control type="image">
-						<posx>82</posx>
-						<posy>88</posy>
+						<posx>75</posx>
+						<posy>20</posy>
 						<width>24</width>
 						<height>24</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>Container.Content(episodes)</visible>
 						<animation effect="fade" start="10" end="50" condition="true">Conditional</animation>
 					</control>
+					</control>
 				</itemlayout>
 				<!-- MOVIES & EPISODES FOCUSED ITEM -->
 				<focusedlayout condition="Container.Content(movies) | Container.Content(episodes)" width="890" height="170">
+					<control type="group">
+						<posx>0</posx>
+						<animation effect="zoom" start="100" end="100" time="0" center="left" condition="true">Conditional</animation>
 					<!-- title label -->
 					<control type="label">
 						<posx>40</posx>
-						<posy>142</posy>
-						<label>$INFO[ListItem.Title]</label>
+						<posy>76</posy>
+						<label>[COLOR=orange][B]&#xB7;[/B][/COLOR] $INFO[ListItem.Title]</label>
 						<textcolor>Color1</textcolor>
 						<selectedcolor>Color6</selectedcolor>
 						<align>left</align>
 						<width>680</width>
 						<include>focus_Banner</include>
-						<font>georgiaBigTitle</font>
+						<font>geoMiddle</font>
+						<scroll>true</scroll>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
 					<!-- missing title fallback label -->
 					<control type="label">
 						<posx>40</posx>
 						<posy>142</posy>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[COLOR=orange][B]&#xB7;[/B][/COLOR] $INFO[ListItem.Label]</label>
 						<textcolor>Color1</textcolor>
 						<selectedcolor>Color6</selectedcolor>
 						<align>left</align>
 						<width>680</width>
 						<include>focus_Banner</include>
-						<font>georgiaBigTitle</font>
+						<font>geoMiddle</font>
+						<scroll>true</scroll>
 						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
 					<!-- "unwatched" label -->
 					<control type="image">
-						<posx>12</posx>
-						<posy>142</posy>
+						<posx>13</posx>
+						<posy>77</posy>
 						<width>24</width>
 						<height>24</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
@@ -376,17 +394,79 @@
 					<!-- show name if via "recently added" etc. -->
 					<control type="label">
 						<posx>50</posx>
-						<posy>100</posy>
+						<posy>30</posy>
 						<label>$INFO[ListItem.TVShowTitle]</label>
 						<font>smallCaps</font>
-						<textcolor>Color4</textcolor>
+						<textcolor>orange</textcolor>
 						<selectedcolor>Color6</selectedcolor>
 						<align>left</align>
 						<width>300</width>
 						<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
 						<include>focus_Banner</include>
 					</control>
+					</control>
 				</focusedlayout>
+				<!-- SONGS UNFOCUSED ITEMS -->
+				<itemlayout condition="Container.Content(songs)" width="1190" height="60">
+					<control type="group">
+						<posx>400</posx>
+						<posy>0</posy>
+						<animation effect="fade" start="100" end="90" time="350" condition="true">Conditional</animation>
+						<animation effect="zoom" start="100" end="80" time="0" center="auto" condition="true">Conditional</animation>
+						<!-- title label -->
+						<control type="label">
+							<posy>0</posy>
+							<posx>0</posx>
+							<width>900</width>
+							<label>$INFO[ListItem.Title]</label>
+							<font>geoMiddle</font>
+							<textcolor>Color4</textcolor>
+							<include>listMenu</include>
+						</control>
+						<!-- missing title fallback label -->
+						<control type="label">
+							<posy>0</posy>
+							<posx>0</posx>
+							<width>900</width>
+							<label>$INFO[ListItem.Label]</label>
+							<font>geoMiddle</font>
+							<textcolor>Color4</textcolor>
+							<visible>IsEmpty(ListItem.Title)</visible>
+							<include>listMenu</include>
+						</control>
+					</control>
+				</itemlayout>
+				<!-- SONGS FOCUSED ITEM -->
+				<focusedlayout condition="Container.Content(songs)" width="1090" height="200">
+					<control type="group">
+						<animation effect="zoom" start="100" end="100" time="0" center="auto" condition="true">Conditional</animation>
+					<!-- songs title label -->
+					<control type="label">
+						<posx>322</posx>
+						<posy>76</posy>
+						<label>[COLOR=orange][B]&#xB7;[/B][/COLOR] $INFO[ListItem.Title]</label>
+						<textcolor>Color1</textcolor>
+						<selectedcolor>Color6</selectedcolor>
+						<align>left</align>
+						<width>1100</width>
+						<include>focus_Banner</include>
+						<font>geoMiddle</font>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					<!-- "duration" & "album" label for song-level -->
+					<control type="label">
+						<posx>400</posx>
+						<posy>130</posy>
+						<width>900</width>
+						<label>$INFO[ListItem.Duration] &#xB7; $INFO[ListItem.Album]</label>
+						<font>smallCaps</font>
+						<textcolor>ivory3</textcolor>
+						<selectedcolor>Color6</selectedcolor>
+						<include>focus_Banner</include>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					</control>					
+				</focusedlayout>				
 			</control>
 			<!-- MOVIES & EPISODES INFO LABELS -->
 			<control type="grouplist" id="1000">
@@ -395,66 +475,66 @@
 				<include>infoDialogHide</include>
 				<include>fade80</include>
 				<posx>743</posx>
-				<posy>70</posy>
+				<posy>80</posy>
 				<itemgap>6</itemgap>
 				<control type="label" id="1">
 					<width>520</width>
-					<label>[COLOR=Color1]$INFO[ListItem.TVShowTitle][/COLOR]</label>
+					<label>[UPPERCASE][COLOR=orange]$INFO[ListItem.TVShowTitle][/COLOR][/UPPERCASE]</label>
 					<include>infoDialogMeta</include>
 					<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
 				</control>
 				<control type="label" id="1">
 					<width>520</width>
-					<label>[COLOR=Color4]$LOCALIZE[31074][/COLOR] [COLOR=Color1]$INFO[ListItem.Date][/COLOR]</label>
+					<label>[UPPERCASE][COLOR=orange]$LOCALIZE[31074][/COLOR] [COLOR=ivory3]$INFO[ListItem.Date][/COLOR][/UPPERCASE]</label>
 					<include>infoDialogMeta</include>
 					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Date)</visible>
 				</control>
 				<control type="label" id="1">
 					<width>520</width>
-					<label>[COLOR=Color4]$LOCALIZE[20416][/COLOR] [COLOR=Color1]$INFO[ListItem.Premiered][/COLOR]</label>
+					<label>[UPPERCASE][COLOR=Color4]$LOCALIZE[20416] [/COLOR][COLOR=ivory3]$INFO[ListItem.Premiered][/COLOR][/UPPERCASE]</label>
 					<include>infoDialogMeta</include>
 					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Premiered)</visible>
 				</control>
 				<control type="label" id="1">
 					<width>520</width>
-					<label>[COLOR=Color4]$LOCALIZE[345][/COLOR] [COLOR=Color1]$INFO[ListItem.Year][/COLOR]</label>
+					<label>[COLOR=Color4]$LOCALIZE[345] [/COLOR][UPPERCASE][COLOR=ivory3]$INFO[ListItem.Year][/COLOR][/UPPERCASE]</label>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(ListItem.Year)</visible>
 				</control>
 				<control type="label" id="1">
 					<width>520</width>
-					<label>[COLOR=Color4]$LOCALIZE[515][/COLOR] [COLOR=Color1]$INFO[ListItem.Genre][/COLOR]</label>
+					<label>[COLOR=Color4]$LOCALIZE[515] [/COLOR][UPPERCASE][COLOR=ivory3]$INFO[ListItem.Genre][/COLOR][/UPPERCASE]</label>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(ListItem.Genre)</visible>
 				</control>
 				<control type="label" id="1">
 					<width>520</width>
-					<label>[COLOR=Color4]$LOCALIZE[20417][/COLOR] [COLOR=Color1]$INFO[ListItem.Writer][/COLOR]</label>
+					<label>[COLOR=Color4]$LOCALIZE[20417] [/COLOR][UPPERCASE][COLOR=ivory3]$INFO[ListItem.Writer][/COLOR][/UPPERCASE]</label>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(ListItem.Writer)</visible>
 				</control>
 				<control type="label" id="1">
 					<width>520</width>
-					<label>[COLOR=Color4]$LOCALIZE[20339][/COLOR] [COLOR=Color1]$INFO[ListItem.Director][/COLOR]</label>
+					<label>[COLOR=Color4]$LOCALIZE[20339] [/COLOR][UPPERCASE][COLOR=ivory3]$INFO[ListItem.Director][/COLOR][/UPPERCASE]</label>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(ListItem.Director)</visible>
 				</control>
-				<control type="label" id="1">
+				<!--<control type="label" id="1">
 					<width>520</width>
 					<label>[COLOR=Color4]$LOCALIZE[572][/COLOR] [COLOR=Color1]$INFO[Listitem.Property(mediaTag-Studio)][/COLOR]</label>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(Listitem.Property(mediaTag-Studio))</visible>
-				</control>
+				</control>-->
 				<control type="label" id="1">
 					<width>520</width>
-					<label>[COLOR=Color4]$LOCALIZE[180][/COLOR] [COLOR=Color1]$INFO[ListItem.Duration][/COLOR]</label>
+					<label>[COLOR=Color4]$LOCALIZE[180] [/COLOR][UPPERCASE][COLOR=ivory3]$INFO[ListItem.Duration][/COLOR][/UPPERCASE]</label>
 					<scroll>true</scroll>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(ListItem.Duration)</visible>
 				</control>
 				<control type="label" id="1">
 					<width>520</width>
-					<label>[COLOR=Color4]$LOCALIZE[563][/COLOR] [COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]</label>
+					<label>[COLOR=Color4]$LOCALIZE[563] [/COLOR][UPPERCASE][COLOR=ivory3]$INFO[ListItem.MPAA][/COLOR][/UPPERCASE]</label>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(ListItem.MPAA)</visible>
 				</control>
@@ -469,15 +549,15 @@
 				<include>infoDialogHide</include>
 				<include>fade80</include>
 				<label>$INFO[ListItem.Plot]</label>
-				<autoscroll delay="10000" time="2000">true</autoscroll>
-				<font>plot</font>
-				<textcolor>Color1</textcolor>
+				<autoscroll delay="15000" time="2500" repeat="10000">true</autoscroll>
+				<font>petitaMedium</font>
+				<textcolor>ivory3</textcolor>
 				<visible>Container.Content(movies) | Container.Content(episodes)</visible>
 			</control>
 			<!-- MOVIES & EPISODES MEDIA FLAGS -->
 			<control type="grouplist">
 				<posx>743</posx>
-				<posy>584</posy>
+				<posy>600</posy>
 				<height>480</height>
 				<orientation>vertical</orientation>
 				<include>transition2</include>
@@ -485,66 +565,67 @@
 				<include>fade80</include>
 				<visible>Container.Content(movies) | Container.Content(episodes)</visible>
 				<control type="grouplist">
-					<height>30</height>
+					<height>25</height>
 					<width>520</width>
 					<orientation>horizontal</orientation>
 					<control type="label">
-						<label>[COLOR=Color4]| $INFO[Listitem.Property(mediaTag-Studio)] |[/COLOR]</label>
+						<label>[UPPERCASE][COLOR=Color4]| $INFO[Listitem.Property(mediaTag-Studio)] |[/COLOR][/UPPERCASE]</label>
 						<include>infoDialogMeta</include>
+						
 						<visible>!IsEmpty(Listitem.Property(mediaTag-Studio))</visible>
 					</control>
 				</control>
 				<control type="grouplist">
-					<height>30</height>
+					<height>25</height>
 					<width>520</width>
 					<orientation>horizontal</orientation>
 					<control type="label">
-						<label>[COLOR=Color4]| VIDEO |[/COLOR]</label>
+						<label>[UPPERCASE][COLOR=Color4]| VIDEO |[/COLOR][/UPPERCASE]</label>
 						<width min="5" max="200">auto</width>
 						<include>infoDialogMeta</include>
 					</control>
 					<control type="label">
-						<label>[COLOR=Color4]AR $INFO[Listitem.Property(mediaTag-aspectRatio)] |[/COLOR]</label>
+						<label>[UPPERCASE][COLOR=Color4]AR $INFO[Listitem.Property(mediaTag-aspectRatio)] |[/COLOR][/UPPERCASE]</label>
 						<width min="5" max="200">auto</width>
 						<include>infoDialogMeta</include>
 						<visible>!IsEmpty(Listitem.Property(mediaTag-aspectRatio))</visible>
 					</control>
 					<control type="label">
-						<label>[COLOR=Color4]$INFO[Listitem.Property(mediaTag-videoResolution)]p |[/COLOR]</label>
+						<label>[UPPERCASE][COLOR=Color4]$INFO[Listitem.Property(mediaTag-videoResolution)]p |[/COLOR][/UPPERCASE]</label>
 						<width min="5" max="200">auto</width>
 						<include>infoDialogMeta</include>
 						<visible>!IsEmpty(Listitem.Property(mediaTag-videoResolution))</visible>
 					</control>
 					<control type="label">
-						<label>[COLOR=Color4]$INFO[Listitem.Property(mediaTag-videoCodec)] |[/COLOR]</label>
+						<label>[UPPERCASE][COLOR=Color4]$INFO[Listitem.Property(mediaTag-videoCodec)] |[/COLOR][/UPPERCASE]</label>
 						<width min="5" max="200">auto</width>
 						<include>infoDialogMeta</include>
 						<visible>!IsEmpty(Listitem.Property(mediaTag-videoCodec))</visible>
 					</control>
 					<control type="label">
-						<label>[COLOR=Color4]$INFO[Listitem.Property(mediaTag-videoFrameRate)] |[/COLOR]</label>
+						<label>[UPPERCASE][COLOR=Color4]$INFO[Listitem.Property(mediaTag-videoFrameRate)] |[/COLOR][/UPPERCASE]</label>
 						<width min="5" max="200">auto</width>
 						<include>infoDialogMeta</include>
 						<visible>!IsEmpty(Listitem.Property(mediaTag-videoFrameRate))</visible>
 					</control>
 				</control>
 				<control type="grouplist">
-					<height>30</height>
+					<height>25</height>
 					<width>520</width>
 					<orientation>horizontal</orientation>
 					<control type="label">
-						<label>[COLOR=Color4]| AUDIO |[/COLOR]</label>
+						<label>[UPPERCASE][COLOR=Color4]| AUDIO |[/COLOR][/UPPERCASE]</label>
 						<width min="5" max="200">auto</width>
 						<include>infoDialogMeta</include>
 					</control>
 					<control type="label">
-						<label>[COLOR=Color4]$INFO[Listitem.Property(mediaTag-audioCodec)] |[/COLOR]</label>
+						<label>[UPPERCASE][COLOR=Color4]$INFO[Listitem.Property(mediaTag-audioCodec)] |[/COLOR][/UPPERCASE]</label>
 						<width min="5" max="200">auto</width>
 						<include>infoDialogMeta</include>
 						<visible>!IsEmpty(Listitem.Property(mediaTag-audioCodec))</visible>
 					</control>
 					<control type="label">
-						<label>[COLOR=Color4]CH $INFO[Listitem.Property(mediaTag-audioChannels)] |[/COLOR]</label>
+						<label>[UPPERCASE][COLOR=Color4]CH $INFO[Listitem.Property(mediaTag-audioChannels)] |[/COLOR][/UPPERCASE]</label>
 						<width min="5" max="200">auto</width>
 						<include>infoDialogMeta</include>
 						<visible>!IsEmpty(Listitem.Property(mediaTag-audioChannels))</visible>

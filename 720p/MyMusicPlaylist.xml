@@ -2,7 +2,138 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
+		<include>allscreens</include>
 		<include>LibraryPlaylistMenu</include>
-		<include>view_ListVideo</include>
+		<include>debugInfos</include>
+		<control type="label">
+			<posx>400</posx>
+			<posy>350</posy>
+			<width>1300</width>
+			<align>left</align>
+			<font>offsetHuge2</font>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>fade80</include>
+			<textcolor>orange</textcolor>
+			<!-- there is a space after the label so the char won't be cut off, leave it untouched -->
+			<label>. $INFO[ListItem.SortLetter] </label>
+			<!-- transparency is used instead of darker color, for see-through effect -->
+			<animation effect="fade" start="0" end="10" condition="!Container.Scrolling" time="200">Conditional</animation>
+		</control>
+		<!-- page titles -->
+		<control type="label" id="200">
+			<posy>9</posy>
+			<posx>25</posx>
+			<width>400</width>
+			<align>left</align>
+			<height>40</height>
+			<font>geoMiddle</font>
+			<aligny>center</aligny>
+			<textcolor>orange</textcolor>
+			<include>transition2</include>
+			<include>notification</include>
+			<label>$INFO[Container.FirstTitle]</label>
+		</control>
+		<control type="label" id="200">
+			<posy>9</posy>
+			<posx>25</posx>
+			<width>400</width>
+			<align>left</align>
+			<height>40</height>
+			<font>geoMiddle</font>
+			<aligny>center</aligny>
+			<textcolor>orange</textcolor>
+			<include>transition2</include>
+			<include>notification</include>
+			<label>$INFO[Container.SecondTitle]</label>
+		</control>
+		<!-- "artist" label for song-level -->
+		<control type="label">
+			<posx>280</posx>
+			<posy>290</posy>
+			<width>700</width>
+			<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
+			<font>geoSmall</font>
+			<textcolor>orange</textcolor>
+			<selectedcolor>Color6</selectedcolor>
+			<include>focus_Banner</include>
+		</control>
+		<control type="fixedlist" id="50">
+			<viewtype label="535">List</viewtype>
+			<posx>0</posx>
+			<posy>90</posy>
+			<width>1260</width>
+			<height>550</height>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<scrolltime>250</scrolltime>
+			<focusposition>3</focusposition>
+			<wraparound>true</wraparound>
+			<pagecontrol>76</pagecontrol>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>fade80</include>
+			<!-- SONGS UNFOCUSED ITEMS -->
+			<itemlayout width="1190" height="60">
+				<control type="group">
+					<posx>400</posx>
+					<posy>0</posy>
+					<animation effect="fade" start="100" end="90" time="350" condition="true">Conditional</animation>
+					<animation effect="zoom" start="100" end="80" time="0" center="auto" condition="true">Conditional</animation>
+					<!-- title label -->
+					<control type="label">
+						<posy>0</posy>
+						<posx>0</posx>
+						<width>900</width>
+						<label>$INFO[ListItem.Title]</label>
+						<font>geoMiddle</font>
+						<textcolor>Color4</textcolor>
+						<selectedcolor>orange</selectedcolor>
+						<include>listMenu</include>
+					</control>
+					<!-- missing title fallback label -->
+					<control type="label">
+						<posy>0</posy>
+						<posx>0</posx>
+						<width>900</width>
+						<label>$INFO[ListItem.Label]</label>
+						<font>geoMiddle</font>
+						<textcolor>Color4</textcolor>
+						<selectedcolor>orange</selectedcolor>
+						<visible>IsEmpty(ListItem.Title)</visible>
+						<include>listMenu</include>
+					</control>
+				</control>
+			</itemlayout>
+			<!-- SONGS FOCUSED ITEM -->
+			<focusedlayout width="1090" height="200">
+				<control type="group">
+					<animation effect="zoom" start="100" end="100" time="0" center="auto" condition="true">Conditional</animation>
+				<!-- songs title label -->
+				<control type="label">
+					<posx>322</posx>
+					<posy>76</posy>
+					<label>[COLOR=orange][B]&#xB7;[/B][/COLOR] $INFO[ListItem.Title]</label>
+					<textcolor>Color1</textcolor>
+					<selectedcolor>Color6</selectedcolor>
+					<align>left</align>
+					<width>1100</width>
+					<include>focus_Banner</include>
+					<font>geoMiddle</font>
+				</control>
+				<!-- "duration" & "album" label for song-level -->
+				<control type="label">
+					<posx>400</posx>
+					<posy>130</posy>
+					<width>900</width>
+					<label>$INFO[ListItem.Duration] &#xB7; $INFO[ListItem.Album]</label>
+					<font>smallCaps</font>
+					<textcolor>ivory3</textcolor>
+					<selectedcolor>Color6</selectedcolor>
+					<include>focus_Banner</include>
+				</control>
+				</control>					
+			</focusedlayout>				
+		</control>
 	</controls>
 </window>

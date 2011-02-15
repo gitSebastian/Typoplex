@@ -3,64 +3,8 @@
 	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
-		<!-- Home Typolex typo banner (big bauhaus title) -->
-		<control type="group">
-			<posy>0</posy>
-			<posx>60</posx>
-			<include>hide</include>
-			<include>transition2</include>
-			<control type="label">
-				<posy>350</posy>
-				<posx>147</posx>
-				<width>1200</width>
-				<label>T</label>
-				<font>bauhausBackTitle</font>
-				<textcolor>Color6</textcolor>
-				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-				<visible>Window.IsActive(Home)</visible>
-			</control>
-			<control type="label">
-				<posy>350</posy>
-				<posx>253</posx>
-				<width>1200</width>
-				<label>Y</label>
-				<font>bauhausBackTitle</font>
-				<textcolor>Color6</textcolor>
-				<animation effect="fade" start="50" end="70" condition="true">Conditional</animation>
-				<visible>Window.IsActive(Home)</visible>
-			</control>
-			<control type="label">
-				<posy>350</posy>
-				<posx>350</posx>
-				<width>1200</width>
-				<label>POPLEX</label>
-				<font>bauhausBackTitle</font>
-				<textcolor>Color6</textcolor>
-				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-				<visible>Window.IsActive(Home)</visible>
-			</control>
-			<control type="label">
-				<posy>210</posy>
-				<posx>307</posx>
-				<width>1200</width>
-				<label>I</label>
-				<font>bauhausBackTitle</font>
-				<textcolor>Color6</textcolor>
-				<animation effect="fade" start="50" end="70" condition="true">Conditional</animation>
-				<visible>Window.IsActive(Home)</visible>
-			</control>
-			<control type="label">
-				<posy>490</posy>
-				<posx>269</posx>
-				<width>1200</width>
-				<label>I</label>
-				<font>bauhausBackTitle</font>
-				<textcolor>Color6</textcolor>
-				<animation effect="fade" start="50" end="70" condition="true">Conditional</animation>
-				<visible>Window.IsActive(Home)</visible>
-			</control>
-		</control>
+		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">allscreens</include>
+		<include>typoplexTypeBG</include>
 		<!-- Dynamic PMS Sections -->
 		<control type="fixedlist" id="300">
 			<posx>350</posx>
@@ -84,10 +28,10 @@
 					<animation effect="fade" start="100" end="90" time="350" condition="true">Conditional</animation>
 					<animation effect="zoom" start="100" end="80" time="0" center="auto" condition="true">Conditional</animation>
 					<control type="label">
-						<posx>45</posx>
+						<posx>25</posx>
 						<posy>0</posy>
 						<label>$INFO[ListItem.Label]</label>
-						<font>georgiaBigTitle</font>
+						<font>geoMiddle</font>
 						<textcolor>Color4</textcolor>
 						<align>left</align>
 						<width>1100</width>
@@ -100,10 +44,10 @@
 				<control type="group">
 					<animation effect="zoom" start="100" end="82" time="0" center="auto" condition="true">Conditional</animation>
 					<control type="label">
-						<posx>100</posx>
-						<posy>75</posy>
-						<label>$INFO[ListItem.Label]</label>
-						<font>georgiaBigTitle</font>
+						<posx>43</posx>
+						<posy>76</posy>
+						<label>[COLOR=orange][B]&#xB7;[/B][/COLOR] $INFO[ListItem.Label]</label>
+						<font>geoBig</font>
 						<textcolor>Color1</textcolor>
 						<align>left</align>
 						<width>1100</width>
@@ -153,9 +97,9 @@
 				<onleft>300</onleft>
 				<label>iTunes</label>
 				<onclick>Plex.ActivateWindow(10501,http://127.0.0.1:32400/music/iTunes/,return)</onclick>
-				<font>bauhausNormal</font>
+				<font>bauhausHomeMenu</font>
 				<textcolor>Color4</textcolor>
-				<focusedcolor>Color1</focusedcolor>
+				<focusedcolor>orange</focusedcolor>
 				<align>right</align>
 			</control>
 			<!-- Plug-Ins -->
@@ -168,9 +112,9 @@
 				<onleft>300</onleft>
 				<label>31914</label>
 				<onclick>SetFocus(1110)</onclick>
-				<font>bauhausNormal</font>
+				<font>bauhausHomeMenu</font>
 				<textcolor>Color4</textcolor>
-				<focusedcolor>Color1</focusedcolor>
+				<focusedcolor>orange</focusedcolor>
 				<align>right</align>
 			</control>
 			<!-- Weather -->
@@ -183,9 +127,9 @@
 				<onleft>300</onleft>
 				<label>$LOCALIZE[8]</label>
 				<onclick>ActivateWindow(weathersettings)</onclick>
-				<font>bauhausNormal</font>
+				<font>bauhausHomeMenu</font>
 				<textcolor>Color4</textcolor>
-				<focusedcolor>Color1</focusedcolor>
+				<focusedcolor>orange</focusedcolor>
 				<align>right</align>
 			</control>
 			<!-- Now Playing Audio -->
@@ -199,9 +143,9 @@
 				<label>$LOCALIZE[13350]</label>
 				<onclick>ActivateWindow(50)</onclick>
 				<visible>Player.HasAudio + !Player.HasVideo</visible>
-				<font>bauhausNormal</font>
+				<font>bauhausHomeMenu</font>
 				<textcolor>Color4</textcolor>
-				<focusedcolor>Color1</focusedcolor>
+				<focusedcolor>orange</focusedcolor>
 				<align>right</align>
 			</control>
 			<!-- Now Playing Video -->
@@ -215,9 +159,9 @@
 				<label>$LOCALIZE[13350]</label>
 				<onclick>ActivateWindow(videoplaylist)</onclick>
 				<visible>Player.HasVideo + !Player.HasAudio</visible>
-				<font>bauhausNormal</font>
+				<font>bauhausHomeMenu</font>
 				<textcolor>Color4</textcolor>
-				<focusedcolor>Color1</focusedcolor>
+				<focusedcolor>orange</focusedcolor>
 				<align>right</align>
 			</control>
 			<!-- About -->
@@ -230,9 +174,9 @@
 				<onleft>300</onleft>
 				<label>About Typoplex</label>
 				<onclick>Skin.ToggleSetting(aboutTypoplex)</onclick>
-				<font>bauhausNormal</font>
+				<font>bauhausHomeMenu</font>
 				<textcolor>Color4</textcolor>
-				<focusedcolor>Color1</focusedcolor>
+				<focusedcolor>orange</focusedcolor>
 				<align>right</align>
 			</control>
 			<!-- Settings window "screen" -->
@@ -244,9 +188,9 @@
 				<onright>200</onright>
 				<onleft>300</onleft>
 				<label>$LOCALIZE[5]</label>
-				<font>bauhausNormal</font>
+				<font>bauhausHomeMenu</font>
 				<textcolor>Color4</textcolor>
-				<focusedcolor>Color1</focusedcolor>
+				<focusedcolor>orange</focusedcolor>
 				<align>right</align>
 			</control>
 			<!-- Exit -->
@@ -259,11 +203,30 @@
 				<onleft>300</onleft>
 				<label>$LOCALIZE[31013]</label>
 				<onclick>SetFocus(1160)</onclick>
-				<font>bauhausNormal</font>
+				<font>bauhausHomeMenu</font>
 				<textcolor>Color4</textcolor>
-				<focusedcolor>Color1</focusedcolor>
+				<focusedcolor>orange</focusedcolor>
 				<align>right</align>
 			</control>
+		</control>
+		<!-- now & next playing infos -->
+		<control type="textbox" id="8">
+			<include>hide</include>
+			<posx>425</posx>
+			<posy>452</posy>
+			<width>640</width>
+			<height>240</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$INFO[MusicPlayer.Artist] [COLOR=orange]- $INFO[MusicPlayer.Title][/COLOR]
+				[CR][COLOR=ivory3]$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration][/COLOR]
+				[CR][CR]
+				[COLOR=orange]NEXT[/COLOR][CR]
+				$INFO[MusicPlayer.Offset(1).Artist] - $INFO[MusicPlayer.Offset(1).Title]</label>
+			<textcolor>Color4</textcolor>
+			<font>bauhausHomeMenu</font>
+			<visible>Control.HasFocus(9013)</visible>
+			<animation effect="fade" start="0" end="100" time="550" condition="Control.HasFocus(9013)">Conditional</animation>
 		</control>
 		<!-- about Typoplex -->
 		<control type="textbox" id="8">
@@ -274,13 +237,13 @@
 			<height>240</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>[COLOR=Color1]Typoplex[/COLOR] design, coding and everything else by [COLOR=Color1]Sebastian[/COLOR] (se.bastian).[CR]
-				Come talk about it on the [COLOR=Color1]Plex[/COLOR] forums, Skins section. There you can follow
+			<label>[COLOR=orange]Typoplex[/COLOR] design, coding and everything else by [COLOR=orange]Sebastian[/COLOR] (se.bastian).[CR]
+				Come talk about it on the [COLOR=orange]Plex[/COLOR] forums, Skins section. There you can follow
 				the latest news and updates, and leave feedback and suggestions. Keep Typoplex
-				updated by downloading always the latest version on [COLOR=Color1]gitHub[/COLOR].[CR][COLOR=Color1]Thank you[/COLOR] for 
+				updated by downloading always the latest version on [COLOR=orange]gitHub[/COLOR].[CR][COLOR=orange]Thank you[/COLOR] for 
 				considering Typoplex to be worthy of your delicate eyes.</label>
 			<textcolor>Color4</textcolor>
-			<font>bauhausNormal</font>
+			<font>bauhausHomeMenu</font>
 			<visible>Control.HasFocus(9014)</visible>
 			<animation effect="fade" start="0" end="100" time="550" condition="Control.HasFocus(9014)">Conditional</animation>
 		</control>
@@ -305,34 +268,34 @@
 					<label>go to Playlist now playing</label>
 					<onclick>ActivateWindow(MusicPlaylist)</onclick>
 					<visible>Player.HasAudio</visible>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 				<control type="button" id="223">
 					<description>go to iTunes playlists</description>
 					<label>go to playlists</label>
 					<onclick>ActivateWindow(10501,plex://127.0.0.1:32400/music/iTunes/Playlists,return)</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 				<control type="button" id="224">
 					<description>go to Artists</description>
 					<label>go to Artists</label>
 					<label>Artists</label>
 					<onclick>ActivateWindow(10501,plex://127.0.0.1:32400/music/iTunes/Artists,return)</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 				<control type="button" id="226">
 					<description>go to iTunes main entry</description>
 					<label>go to iTunes main entry</label>
 					<onclick>ActivateWindow(10501,plex://127.0.0.1:32400/music/iTunes,return)</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 			</control>
 			<!-- Plug-Ins sub-menu -->
@@ -349,28 +312,28 @@
 					<description>go to Video Plug-Ins</description>
 					<label>go to Video Plug-Ins</label>
 					<onclick>ActivateWindow(6)</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 				<control type="button" id="282">
 					<description>go to Music Plug-Ins</description>
 					<label>go to Music Plug-Ins</label>
 					<onclick>ActivateWindow(MyMusic)</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 				<control type="button" id="283">
 					<description>go to Picture Plug-Ins</description>
 					<label>go to Picture Plug-Ins</label>
 					<onclick>ActivateWindow(2)</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 			</control>
-			<!-- Weather sub-menu -->
+			<!-- Weather infos -->
 			<control type="grouplist" id="200">
 				<posx>0</posx>
 				<posy>61</posy>
@@ -398,8 +361,8 @@
 						<control type="label" id="22">
 							<info>Weather.Conditions</info>
 							<width min="29" max="500">auto</width>
-							<font>bauhausNormal</font>
-							<textcolor>Color4</textcolor>
+							<font>bauhausHomeMenu</font>
+							<textcolor>orange</textcolor>
 							<focusedcolor>Color1</focusedcolor>
 						</control>
 						<control type="grouplist">
@@ -409,14 +372,14 @@
 							<control type="label">
 								<label>$LOCALIZE[31101] :</label>
 								<width min="29" max="250">auto</width>
-								<font>bauhausNormal</font>
+								<font>bauhausHomeMenu</font>
 								<textcolor>Color4</textcolor>
 								<focusedcolor>Color1</focusedcolor>
 							</control>
 							<control type="label" id="23">
 								<info>Weather.Temperature</info>
 								<width min="29" max="500">auto</width>
-								<font>bauhausNormal</font>
+								<font>bauhausHomeMenu</font>
 								<textcolor>Color4</textcolor>
 								<focusedcolor>Color1</focusedcolor>
 							</control>
@@ -440,41 +403,41 @@
 					<description>go to Plex Appearence Settings</description>
 					<label>Appearence</label>
 					<onclick>ActivateWindow(appearancesettings)</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 				<control type="button" id="263">
 					<description>go to Plex Video Settings</description>
 					<label>Video</label>
 					<onclick>ActivateWindow(videossettings)</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 				<control type="button" id="264">
 					<description>go to Plex Audio Settings</description>
 					<label>Audio</label>
 					<onclick>ActivateWindow(musicsettings)</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 				<control type="button" id="265">
 					<description>go to Plex Picture Settings</description>
 					<label>Picture</label>
 					<onclick>ActivateWindow(picturessettings)</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 				<control type="button" id="266">
 					<description>go to Plex System Settings</description>
 					<label>System</label>
 					<onclick>ActivateWindow(systemsettings)</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 			</control>
 			<!-- Exit sub-menu -->
@@ -495,18 +458,18 @@
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>dialog.close(all,true)</onclick>
 					<onclick>Plex.Shutdown()</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 				<control type="button" id="292">
 					<description>Sleep System</description>
 					<label>Sleep System</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>XBMC.SleepSystem()</onclick>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 				<control type="button" id="293">
 					<description>Shutdown System</description>
@@ -514,9 +477,9 @@
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>XBMC.ShutDownSystem()</onclick>
 					<visible>System.CanSuspend</visible>
-					<font>bauhausNormal</font>
+					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>orange</focusedcolor>
 				</control>
 			</control>
 		</control>

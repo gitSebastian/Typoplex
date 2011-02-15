@@ -14,20 +14,39 @@
 				<include>contextMenuHide</include>
 				<control type="label">
 					<width>1200</width>
+					<posx>1</posx>
 					<label>I</label>
 					<font>bauhausBackTitle</font>
-					<textcolor>Color4</textcolor>
+					<textcolor>orange</textcolor>
 					<!-- transparency is used instead of darker color, for see-through effect -->
-					<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+					<animation effect="fade" start="50" end="100" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<posy>140</posy>
+					<posx>1</posx>
+					<width>1200</width>
+					<label>I</label>
+					<font>bauhausBackTitle</font>
+					<textcolor>orange</textcolor>
+					<!-- transparency is used instead of darker color, for see-through effect -->
+					<animation effect="fade" start="50" end="100" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<width>1200</width>
+					<label>I</label>
+					<font>bauhausBackTitle</font>
+					<textcolor>Color6</textcolor>
+					<!-- transparency is used instead of darker color, for see-through effect -->
+					<animation effect="fade" start="50" end="95" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
 					<posy>140</posy>
 					<width>1200</width>
 					<label>I</label>
 					<font>bauhausBackTitle</font>
-					<textcolor>Color4</textcolor>
+					<textcolor>Color6</textcolor>
 					<!-- transparency is used instead of darker color, for see-through effect -->
-					<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+					<animation effect="fade" start="50" end="95" condition="true">Conditional</animation>
 				</control>
 			</control>
 			<control type="label">
@@ -35,137 +54,148 @@
 				<posy>400</posy>
 				<width>10000</width>
 				<align>left</align>
-				<font>offsetHuge</font>
+				<font>offsetHuge2</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
-				<textcolor>Color4</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- there is a space after the label so the char won't be cut off, leave it untouched -->
-				<label>.$INFO[System.CurrentControl] </label>
+				<!--<label>.$INFO[System.CurrentControl] </label>-->
 				<!-- transparency is used instead of darker color, for see-through effect -->
 				<animation effect="fade" start="10" end="15" condition="true">Conditional</animation>
 			</control>
+			
+			
 			<control type="label">
-				<posy>650</posy>
-				<posx>50</posx>
-				<width>2000</width>
-				<font>bauhausBackTitle</font>
+				<posy>9</posy>
+				<posx>285</posx>
+				<width>800</width>
+				<align>right</align>
+				<font>geoMiddle</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
-				<textcolor>Color6</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+				<animation effect="fade" start="50" end="80" condition="true">Conditional</animation>
 				<label>$LOCALIZE[10507] </label>
 				<visible>Window.IsActive(settings)</visible>
 			</control>
 			<control type="label">
-				<posy>650</posy>
-				<posx>50</posx>
-				<width>2000</width>
-				<font>bauhausBackTitle</font>
+				<posy>9</posy>
+				<posx>285</posx>
+				<width>800</width>
+				<align>right</align>
+				<font>geoMiddle</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
-				<textcolor>Color6</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
-				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+				<animation effect="fade" start="50" end="80" condition="true">Conditional</animation>
 				<label>$LOCALIZE[480]</label>
 				<visible>Window.IsActive(appearancesettings)</visible>
 			</control>
 			<control type="label">
-				<posy>650</posy>
-				<posx>50</posx>
-				<width>2000</width>
-				<font>bauhausBackTitle</font>
+				<posy>9</posy>
+				<posx>285</posx>
+				<width>800</width>
+				<align>right</align>
+				<font>geoMiddle</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
-				<textcolor>Color6</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
 				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
 				<label>$LOCALIZE[157]</label>
 				<visible>Window.IsActive(videossettings)</visible>
 			</control>
 			<control type="label">
-				<posy>650</posy>
-				<posx>50</posx>
-				<width>2000</width>
-				<font>bauhausBackTitle</font>
+				<posy>9</posy>
+				<posx>285</posx>
+				<width>800</width>
+				<align>right</align>
+				<font>geoMiddle</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
-				<textcolor>Color6</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
 				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
 				<label>$LOCALIZE[0]</label>
 				<visible>Window.IsActive(programssettings)</visible>
 			</control>
 			<control type="label">
-				<posy>650</posy>
-				<posx>50</posx>
-				<width>2000</width>
-				<font>bauhausBackTitle</font>
+				<posy>9</posy>
+				<posx>285</posx>
+				<width>800</width>
+				<align>right</align>
+				<font>geoMiddle</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
-				<textcolor>Color6</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
 				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
 				<label>$LOCALIZE[2]</label>
 				<visible>Window.IsActive(musicsettings)</visible>
 			</control>
 			<control type="label">
-				<posy>650</posy>
-				<posx>50</posx>
-				<width>2000</width>
-				<font>bauhausBackTitle</font>
+				<posy>9</posy>
+				<posx>285</posx>
+				<width>800</width>
+				<align>right</align>
+				<font>geoMiddle</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
-				<textcolor>Color6</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
 				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
 				<label>$LOCALIZE[1]</label>
 				<visible>Window.IsActive(picturessettings)</visible>
 			</control>
 			<control type="label">
-				<posy>650</posy>
-				<posx>50</posx>
-				<width>2000</width>
-				<font>bauhausBackTitle</font>
+				<posy>9</posy>
+				<posx>285</posx>
+				<width>800</width>
+				<align>right</align>
+				<font>geoMiddle</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
-				<textcolor>Color6</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
 				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
 				<label>$LOCALIZE[705]</label>
 				<visible>Window.IsActive(networksettings)</visible>
 			</control>
 			<control type="label">
-				<posy>650</posy>
-				<posx>50</posx>
-				<width>2000</width>
-				<font>bauhausBackTitle</font>
+				<posy>9</posy>
+				<posx>285</posx>
+				<width>800</width>
+				<align>right</align>
+				<font>geoMiddle</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
-				<textcolor>Color6</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
 				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
 				<label>$LOCALIZE[12600]</label>
 				<visible>Window.IsActive(weathersettings)</visible>
 			</control>
 			<control type="label">
-				<posy>650</posy>
-				<posx>50</posx>
-				<width>2000</width>
-				<font>bauhausBackTitle</font>
+				<posy>9</posy>
+				<posx>285</posx>
+				<width>800</width>
+				<align>right</align>
+				<font>geoMiddle</font>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
-				<textcolor>Color6</textcolor>
+				<textcolor>orange</textcolor>
 				<!-- transparency is used instead of darker color, for see-through effect -->
 				<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
 				<label>$LOCALIZE[13000]</label>

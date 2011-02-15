@@ -1,14 +1,19 @@
 <window id="113">
 	<defaultcontrol>-</defaultcontrol>
 	<controls>
-		<control type="label" id="0">
+		<control type="label" id="0">			
+			<include>transition2</include>
 			<posx>25r</posx>
-            <posy>60</posy>
+            <posy>40</posy>
             <description>Label</description>
 			<label>MUTE</label>
             <height>35</height>
             <width>110</width>
-			<include>notificationBottom</include>
+			<align>right</align>
+			<font>geoMiddle</font>
+			<aligny>center</aligny>
+			<textcolor>orange</textcolor>
+			<animation effect="slide" start="0" end="-45" time="100" tween="Cubic" condition="Window.IsActive(107)">Conditional</animation>
 		</control>
 	</controls>
 </window>

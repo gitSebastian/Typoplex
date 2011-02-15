@@ -14,10 +14,10 @@
 				<height>600</height>
 				<aligny>top</aligny>
 				<font>caviarHuge</font>
-				<textcolor>Color1</textcolor>
+				<textcolor>ivory3</textcolor>
 				<width>1500</width>
 				<wrapmultiline>true</wrapmultiline>
-				<label>[UPPERCASE][COLOR=Color4]$LOCALIZE[345][/COLOR][COLOR=Color1]$INFO[ListItem.Year][/COLOR][COLOR=Color4]$LOCALIZE[515][/COLOR][COLOR=Color1]$INFO[ListItem.Genre][/COLOR][COLOR=Color4]$LOCALIZE[20417][/COLOR][COLOR=Color1]$INFO[ListItem.Writer][/COLOR][COLOR=Color4]$LOCALIZE[20339][/COLOR][COLOR=Color1]$INFO[ListItem.Director][/COLOR][COLOR=Color4]$LOCALIZE[572][/COLOR][COLOR=Color1]$INFO[Listitem.Property(mediaTag-Studio)][/COLOR][COLOR=Color4]$LOCALIZE[180][/COLOR][COLOR=Color1]$INFO[ListItem.Duration][/COLOR][COLOR=Color4]$LOCALIZE[563][/COLOR][COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]$INFO[ListItem.Plot][/UPPERCASE]</label>
+				<label>[UPPERCASE][COLOR=Color4]$LOCALIZE[345][/COLOR][COLOR=ivory3]$INFO[ListItem.Year][/COLOR][COLOR=Color4]$LOCALIZE[515][/COLOR][COLOR=ivory3]$INFO[ListItem.Genre][/COLOR][COLOR=Color4]$LOCALIZE[20417][/COLOR][COLOR=ivory3]$INFO[ListItem.Writer][/COLOR][COLOR=Color4]$LOCALIZE[20339][/COLOR][COLOR=ivory3]$INFO[ListItem.Director][/COLOR][COLOR=Color4]$LOCALIZE[572][/COLOR][COLOR=ivory3]$INFO[Listitem.Property(mediaTag-Studio)][/COLOR][COLOR=Color4]$LOCALIZE[180][/COLOR][COLOR=ivory3]$INFO[ListItem.Duration][/COLOR][COLOR=Color4]$LOCALIZE[563][/COLOR][COLOR=ivory3]$INFO[ListItem.MPAA][/COLOR]$INFO[ListItem.Plot][/UPPERCASE]</label>
 				<visible>!IsEmpty(ListItem.Year)</visible>
 			</control>
 		</control>

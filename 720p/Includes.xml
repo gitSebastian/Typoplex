@@ -44,7 +44,70 @@
 	</include>
 	<!-- ALL SCREEN INCLUDES -->
 	<include name="allscreens">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>white.png</texture>
+			<colordiffuse>BackgroundColor</colordiffuse>
+		</control>
 		<include>libClock</include>
+		<!-- page titles -->
+		<control type="label" id="200">
+			<posy>9</posy>
+			<posx>25</posx>
+			<width>400</width>
+			<align>left</align>
+			<height>40</height>
+			<font>geoMiddle</font>
+			<aligny>center</aligny>
+			<textcolor>orange</textcolor>
+			<include>transition2</include>
+			<include>notification</include>
+			<label>$INFO[Container.FirstTitle]</label>
+			<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(episodes)]</visible>
+		</control>
+		<control type="label" id="200">
+			<posy>9</posy>
+			<posx>25</posx>
+			<width>400</width>
+			<align>left</align>
+			<height>40</height>
+			<font>geoMiddle</font>
+			<aligny>center</aligny>
+			<textcolor>orange</textcolor>
+			<include>transition2</include>
+			<include>notification</include>
+			<label>$INFO[Container.SecondTitle]</label>
+			<visible>Container.Content(seasons)</visible>
+		</control>
+		<control type="label" id="200">
+			<posy>9</posy>
+			<posx>25</posx>
+			<width>400</width>
+			<align>left</align>
+			<height>40</height>
+			<font>geoMiddle</font>
+			<aligny>center</aligny>
+			<textcolor>orange</textcolor>
+			<include>transition2</include>
+			<include>notification</include>
+			<label>Plug-Ins</label>
+			<visible>Container.Content(plugins)</visible>
+		</control>
+		<control type="label">
+			<posx>60</posx>
+			<posy>55</posy>
+			<width>700</width>
+			<label>[UPPERCASE]$INFO[Container.SecondTitle][/UPPERCASE]</label>
+			<font>geoSmall</font>
+			<textcolor>orange</textcolor>
+			<selectedcolor>Color6</selectedcolor>
+			<include>transition2</include>
+			<include>notification</include>
+			<visible>!Container.Content(movies) + [Container.Content(playlists) | Container.Content(artists) | Container.Content(albums)]</visible>
+		</control>
 	</include>
 	<!-- PAGE ELEMENTS -->
 	<include name="notificationTop">
@@ -92,6 +155,87 @@
 		<align>left</align>
 		<font>normalLow</font>
 	</include>
+	<!-- Home Typolex typo banner -->
+	<include name="typoplexTypeBG">
+		<control type="group">
+			<posy>0</posy>
+			<posx>60</posx>
+			<include>hide</include>
+			<include>transition2</include>
+			<control type="label">
+				<posy>350</posy>
+				<posx>147</posx>
+				<width>1200</width>
+				<label>T</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<animation effect="fade" start="50" end="27" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posy>350</posy>
+				<posx>254</posx>
+				<width>1200</width>
+				<label>Y</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>orange</textcolor>
+				<animation effect="fade" start="50" end="100" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posy>350</posy>
+				<posx>253</posx>
+				<width>1200</width>
+				<label>Y</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<animation effect="fade" start="50" end="70" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posy>350</posy>
+				<posx>350</posx>
+				<width>1200</width>
+				<label>POPLEX</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<animation effect="fade" start="50" end="27" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posy>210</posy>
+				<posx>308</posx>
+				<width>1200</width>
+				<label>I</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>orange</textcolor>
+				<animation effect="fade" start="50" end="100" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posy>490</posy>
+				<posx>270</posx>
+				<width>1200</width>
+				<label>I</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>orange</textcolor>
+				<animation effect="fade" start="50" end="100" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posy>210</posy>
+				<posx>307</posx>
+				<width>1200</width>
+				<label>I</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<animation effect="fade" start="50" end="95" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posy>490</posy>
+				<posx>269</posx>
+				<width>1200</width>
+				<label>I</label>
+				<font>bauhausBackTitle</font>
+				<textcolor>Color6</textcolor>
+				<animation effect="fade" start="50" end="95" condition="true">Conditional</animation>
+			</control>
+		</control>
+	</include>
 	<!-- CONTROLS -->
 	<include name="watchedOverlay">
 		<width>24</width>
@@ -102,8 +246,8 @@
 	<!-- BUTTONS -->
 	<include name="contextButton">
 		<textcolor>Color4</textcolor>
-		<font>pagemenu</font>
-		<focusedcolor>Color1</focusedcolor>
+		<font>petitaMedium</font>
+		<focusedcolor>orange</focusedcolor>
 		<width>400</width>
 		<texturenofocus>-</texturenofocus>
 		<texturefocus>home/menuSelect.png</texturefocus>
@@ -120,7 +264,7 @@
 		<texturenofocus>-</texturenofocus>
 		<textoffsety>3</textoffsety>
 		<textoffsetx>25</textoffsetx>
-		<font>category</font>
+		<font>petitaMedium</font>
 		<height>50</height>
 		<textcolor>Color4</textcolor>
 		<aspectratio align="right">stretch</aspectratio>
@@ -133,7 +277,7 @@
 		<textoffsetx>30</textoffsetx>
 		<textoffsety>7</textoffsety>
 		<height>46</height>
-		<font>normalLow</font>
+		<font>petitaSmall</font>
 		<textcolor>Color4</textcolor>
 		<width>850</width>
 	</include>
@@ -269,7 +413,7 @@
 	<include name="infoDialogMeta">
 		<height>22</height>
 		<aligny>center</aligny>
-		<font>special6</font>
+		<font>petitaMedium</font>
 		<textcolor>Color2</textcolor>
 	</include>
 	<!-- DATE & CLOCK -->
@@ -277,16 +421,16 @@
 	<include name="clock">
 		<control type="group">
 			<include>fadeinout</include>
-			<posx>1160</posx>
-			<posy>10</posy>
+			<posx>1148</posx>
+			<posy>13</posy>
 			<control type="label" id="200">
 				<posy>0</posy>
 				<width>110</width>
 				<height>34</height>
-				<label>[B]$INFO[System.Time][/B]</label>
+				<label>$INFO[System.Time]</label>
 				<align>center</align>
-				<font>geoMiddle</font>
-				<textcolor>Color1</textcolor>
+				<font>petitaBig</font>
+				<textcolor>ivory3</textcolor>
 			</control>
 		</control>
 	</include>
@@ -298,11 +442,11 @@
 			<width>400</width>
 			<align>right</align>
 			<height>40</height>
-			<font>geoMiddle</font>
+			<font>geoSmall</font>
 			<aligny>center</aligny>
 			<textcolor>Color1</textcolor>
 			<include>transition2</include>
-			<label>[COLOR=Color4]$INFO[System.Date][/COLOR] $INFO[System.Time]</label>
+			<label>[COLOR=Color4]$INFO[System.Date][/COLOR] [COLOR=orange]$INFO[System.Time][/COLOR]</label>
 			<visible>![Control.IsVisible(56)] + ![Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(12600)] + ![Window.IsActive(2) + Control.IsVisible(52)] | Window.IsActive(111)</visible>
 		</control>
 	</include>
@@ -344,9 +488,9 @@
 		<texture border="20">blackoverlay.png</texture>
 	</include>
 	<include name="contextMenuButton">
-		<font>bauhausMedium</font>
-		<textcolor>Color4</textcolor>
-		<focusedcolor>Color1</focusedcolor>
+		<font>petitaMedium</font>
+		<textcolor>ivory3</textcolor>
+		<focusedcolor>orange</focusedcolor>
 		<height>40</height>
 		<align>left</align>
 		<aligny>-</aligny>
@@ -360,17 +504,17 @@
 		<height>40</height>
 		<align>left</align>
 		<aligny>-</aligny>
-		<font>mediumLow</font>
+		<font>petitaMedium</font>
 		<textcolor>Color4</textcolor>
 	</include>
 	<include name="dialogHeading">
 		<posx>34</posx>
 		<posy>28</posy>
-		<font>bauhausMedium</font>
+		<font>petitaMedium</font>
 		<align>center</align>
 		<aligny>center</aligny>
 		<height>30</height>
-		<textcolor>Color1</textcolor>
+		<textcolor>ivory3</textcolor>
 		<scroll>false</scroll>
 	</include>
 	<include name="dialogLine">
@@ -378,33 +522,33 @@
 		<height>22</height>
 		<align>center</align>
 		<aligny>center</aligny>
-		<font>bauhausMedium</font>
+		<font>petitaMedium</font>
 		<textcolor>Color4</textcolor>
 		<scroll>false</scroll>
 	</include>
 	<include name="dialogButton">
 		<width>120</width>
 		<height>42</height>
-		<font>medium</font>
+		<font>petitaMedium</font>
 		<align>center</align>
 		<aligny>-</aligny>
 		<textoffsety>6</textoffsety>
 		<texturenofocus border="20">buttonD.png</texturenofocus>
 		<texturefocus border="20">buttonD-focus.png</texturefocus>
-		<textcolor>Color4</textcolor>
-		<focusedcolor>Color1</focusedcolor>
+		<textcolor>ivory3</textcolor>
+		<focusedcolor>orange</focusedcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="dialogConfirmButton">
 		<width>120</width>
 		<height>42</height>
-		<font>medium</font>
+		<font>petitaMedium</font>
 		<align>center</align>
 		<aligny>-</aligny>
 		<textoffsety>6</textoffsety>
 		<texturenofocus border="20">buttonD.png</texturenofocus>
 		<texturefocus border="20,16,20,16">buttonD-focus.png</texturefocus>
-		<textcolor>Color4</textcolor>
+		<textcolor>ivory3</textcolor>
 		<focusedcolor>Color1</focusedcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
@@ -412,7 +556,7 @@
 		<textcolor>Color4</textcolor>
 		<textoffsetx>15</textoffsetx>
 		<focusedcolor>Color1</focusedcolor>
-		<font>mediumLow</font>
+		<font>petitaMedium</font>
 		<textoffsetx>15</textoffsetx>
 		<aligny>center</aligny>
 		<height>40</height>
@@ -420,7 +564,7 @@
 	</include>
 	<include name="dialogTextField">
 		<height>40</height>
-		<font>medium</font>
+		<font>petitaMedium</font>
 		<align>center</align>
 		<textoffsety>5</textoffsety>
 		<textcolor>Color4</textcolor>
@@ -431,7 +575,7 @@
 	<include name="dialogRadio">
 		<textcolor>Color4</textcolor>
 		<focusedcolor>Color1</focusedcolor>
-		<font>mediumLow</font>
+		<font>petitaMedium</font>
 		<textureradiofocus>radioOn.png</textureradiofocus>
 		<textureradionofocus>radioOff.png</textureradionofocus>
 		<radioheight>24</radioheight>
@@ -441,7 +585,7 @@
 		<textcolor>Color4</textcolor>
 		<textoffsetx>15</textoffsetx>
 		<focusedcolor>Color1</focusedcolor>
-		<font>mediumLow</font>
+		<font>petitaMedium</font>
 		<textoffsetx>15</textoffsetx>
 		<textoffsety>-3</textoffsety>
 		<aligny>center</aligny>
@@ -458,7 +602,7 @@
 		<texturesliderbar>dialogs/sliderBackground.png</texturesliderbar>
 		<textureslidernib>dialogs/sliderNib.png</textureslidernib>
 		<textureslidernibfocus>dialogs/sliderNib.png</textureslidernibfocus>
-		<font>mediumLow</font>
+		<font>petitaMedium</font>
 		<height>40</height>
 		<textcolor>Color4</textcolor>
 		<focusedcolor>Color1</focusedcolor>
@@ -476,9 +620,9 @@
 		<orientation>vertical</orientation>
 	</include>
 	<include name="keyboardButton">
-		<font>medium</font>
+		<font>petitaMedium</font>
 		<textcolor>Color4</textcolor>
-		<focusedcolor>Color1</focusedcolor>
+		<focusedcolor>orange</focusedcolor>
 		<width>48</width>
 		<height>48</height>
 		<align>center</align>
@@ -489,30 +633,29 @@
 		<control type="group">
 			<description>Current track info</description>
 			<control type="label">
-				<posy>0</posy>
+				<posy>-30</posy>
 				<posx>100</posx>
 				<width>1000</width>
-				<font>georgiaBigTitle</font>
+				<font>geoMiddle</font>
 				<textcolor>Color1</textcolor>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<align>left</align>
 			</control>
 			<control type="label">
 				<posx>100</posx>
-				<posy>35</posy>
+				<posy>20</posy>
 				<width>1000</width>
-				<font>regularTV</font>
+				<font>geoMiddle</font>
 				<textcolor>Color4</textcolor>
 				<label>$INFO[MusicPlayer.Album]</label>
 				<align>left</align>
 			</control>
-			
 			<control type="label">
 				<posx>100</posx>
 				<posy>108</posy>
 				<width>1000</width>
-				<font>georgiaBigTitle</font>
-				<textcolor>Color1</textcolor>
+				<font>geoMiddle</font>
+				<textcolor>orange</textcolor>
 				<label>$INFO[MusicPlayer.Title]</label>
 				<align>left</align>
 			</control>
@@ -522,17 +665,18 @@
 				<width>1000</width>
 				<align>left</align>
 				<label>$INFO[Player.Duration]</label>
-				<font>regularTV</font>
-				<textcolor>Color4</textcolor>
+				<font>geoSmall</font>
+				<textcolor>ivory3</textcolor>
 			</control>
 			<control type="label">
-				<posx>170</posx>
-				<posy>200</posy>
+				<posx>160</posx>
+				<posy>165</posy>
 				<width>1000</width>
 				<align>left</align>
 				<label>/ $INFO[Player.Time]</label>
-				<font>playerTime</font>
-				<textcolor>Color4</textcolor>
+				<font>geoBig</font>
+				<textcolor>ivory3</textcolor>
+				<animation effect="fade" start="10" end="100" condition="true">Conditional</animation>
 			</control>
 		</control>
 	</include>
@@ -543,7 +687,7 @@
 				<posx>200r</posx>
 				<posy>70</posy>
 				<width>1000</width>
-				<font>bauhausNormal</font>
+				<font>geoSmall</font>
 				<textcolor>Color4</textcolor>
 				<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
 				<align>right</align>
@@ -552,8 +696,8 @@
 				<posx>200r</posx>
 				<posy>93</posy>
 				<width>1000</width>
-				<font>bauhausNormal</font>
-				<textcolor>Color4</textcolor>
+				<font>geoSmalll</font>
+				<textcolor>orange</textcolor>
 				<label>$INFO[MusicPlayer.Offset(1).Title]</label>
 				<align>right</align>
 			</control>
@@ -563,19 +707,19 @@
 		<control type="group">
 			<description>Current track info</description>
 			<control type="label">
-				<posy>0</posy>
+				<posy>-30</posy>
 				<posx>200r</posx>
 				<width>1000</width>
-				<font>georgiaBigTitle</font>
+				<font>geoMiddle</font>
 				<textcolor>Color1</textcolor>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<align>right</align>
 			</control>
 			<control type="label">
 				<posx>200r</posx>
-				<posy>35</posy>
+				<posy>20</posy>
 				<width>1000</width>
-				<font>regularTV</font>
+				<font>geoMiddle</font>
 				<textcolor>Color4</textcolor>
 				<label>$INFO[MusicPlayer.Album]</label>
 				<align>right</align>
@@ -584,8 +728,8 @@
 				<posx>200r</posx>
 				<posy>108</posy>
 				<width>1000</width>
-				<font>georgiaBigTitle</font>
-				<textcolor>Color1</textcolor>
+				<font>geoMiddle</font>
+				<textcolor>orange</textcolor>
 				<label>$INFO[MusicPlayer.Title]</label>
 				<align>right</align>
 			</control>
@@ -593,19 +737,19 @@
 				<posx>200r</posx>
 				<posy>150</posy>
 				<width>1000</width>
-				<font>regularTV</font>
-				<textcolor>Color4</textcolor>
+				<font>geoSmall</font>
+				<textcolor>ivory3</textcolor>
 				<label>$INFO[Player.Duration]</label>
 				<align>right</align>
 			</control>
 			<control type="label">
-				<posx>310r</posx>
-				<posy>200</posy>
+				<posx>270r</posx>
+				<posy>165</posy>
 				<width>1000</width>
 				<align>right</align>
 				<label> $INFO[Player.Time] /</label>
-				<font>playerTime</font>
-				<textcolor>Color4</textcolor>
+				<font>geoBig</font>
+				<textcolor>ivory3</textcolor>
 			</control>
 		</control>
 	</include>
@@ -616,7 +760,7 @@
 				<posx>100</posx>
 				<posy>70</posy>
 				<width>1000</width>
-				<font>bauhausNormal</font>
+				<font>geoSmall</font>
 				<textcolor>Color4</textcolor>
 				<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
 				<align>left</align>
@@ -625,8 +769,8 @@
 				<posx>100</posx>
 				<posy>93</posy>
 				<width>1000</width>
-				<font>bauhausNormal</font>
-				<textcolor>Color4</textcolor>
+				<font>geoSmall</font>
+				<textcolor>orange</textcolor>
 				<label>$INFO[MusicPlayer.Offset(1).Title]</label>
 				<align>left</align>
 			</control>

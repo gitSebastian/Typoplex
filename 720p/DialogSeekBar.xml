@@ -22,13 +22,13 @@
 				</control>
 				<control type="label" id="22">
 					<description>seek time</description>
-					<posy>543</posy>
+					<posy>545</posy>
 					<posx>820</posx>
 					<width>300</width>
 					<align>right</align>
 					<label>$INFO[Player.Time]</label>
-					<textcolor>Color1</textcolor>
-					<include>Heading3</include>
+					<textcolor>ivory3</textcolor>
+					<font>petitaMedium</font>
 				</control>
 				<control type="label" id="22">
 					<description>duration</description>
@@ -37,8 +37,8 @@
 					<width>100</width>
 					<align>right</align>
 					<label>$INFO[Player.Duration]</label>
-					<textcolor>Color1</textcolor>
-					<include>Heading3</include>
+					<textcolor>ivory3</textcolor>
+					<font>petitaMedium</font>
 				</control>
 				<control type="progress" id="1">
 					<description>Progressbar</description>
@@ -50,119 +50,119 @@
 				</control>
 				<control type="group" id="901">
 					<posx>465</posx>
-					<posy>543</posy>
+					<posy>545</posy>
 					<include>fadeinout</include>
 					<control type="label" id="24">
 						<align>left</align>
 						<label>$LOCALIZE[773] $INFO[Player.SeekOffset]</label>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 						<visible>Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]</visible>
 					</control>
 					<control type="label" id="24">
 						<align>left</align>
 						<label>$LOCALIZE[15107]</label>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 						<visible>Player.Caching</visible>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31040]</label>
 						<visible>Player.Paused + !Control.IsVisible(24)</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31040]</label>
 						<visible>Player.Paused + !Control.IsVisible(24)</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31041]</label>
 						<visible>Player.Forwarding2x</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31042]</label>
 						<visible>Player.Forwarding4x</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31043]</label>
 						<visible>Player.Forwarding8x</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31044]</label>
 						<visible>Player.Forwarding16x</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31045]</label>
 						<visible>Player.Forwarding32x</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31046]</label>
 						<visible>Player.Rewinding2x</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31047]</label>
 						<visible>Player.Rewinding4x</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31048]</label>
 						<visible>Player.Rewinding8x</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31049]</label>
 						<visible>Player.Rewinding16x</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 					<control type="label" id="0">
 						<align>left</align>
 						<label>$LOCALIZE[31050]</label>
 						<visible>Player.Rewinding32x</visible>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory3</textcolor>
 						<include>screenwidth</include>
-						<include>Heading3</include>
+						<font>petitaMedium</font>
 					</control>
 				</control>
 			</control>

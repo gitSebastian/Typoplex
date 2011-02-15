@@ -7,6 +7,13 @@
 			<include>state_OSD</include>
 			<!-- bg favorites -->
 			<control type="label">
+				<posx>-9</posx>
+				<posy>566</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color4</textcolor>
+			</control>
+			<control type="label">
 				<posx>-10</posx>
 				<posy>565</posy>
 				<label>+</label>
@@ -14,6 +21,13 @@
 				<textcolor>Color6</textcolor>
 			</control>
 			<!-- bg audio -->
+			<control type="label">
+				<posx>134</posx>
+				<posy>566</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color4</textcolor>
+			</control>
 			<control type="label">
 				<posx>133</posx>
 				<posy>565</posy>
@@ -23,6 +37,13 @@
 			</control>
 			<!-- bg video -->
 			<control type="label">
+				<posx>220</posx>
+				<posy>566</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color4</textcolor>
+			</control>
+			<control type="label">
 				<posx>219</posx>
 				<posy>565</posy>
 				<label>+</label>
@@ -30,6 +51,13 @@
 				<textcolor>Color6</textcolor>
 			</control>
 			<!-- bg previous -->
+			<control type="label">
+				<posx>364</posx>
+				<posy>566</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color6</textcolor>
+			</control>
 			<control type="label">
 				<posx>363</posx>
 				<posy>565</posy>
@@ -39,6 +67,13 @@
 			</control>
 			<!-- bg rewind -->
 			<control type="label">
+				<posx>450</posx>
+				<posy>566</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color6</textcolor>
+			</control>
+			<control type="label">
 				<posx>449</posx>
 				<posy>565</posy>
 				<label>+</label>
@@ -46,6 +81,14 @@
 				<textcolor>Color4</textcolor>
 			</control>
 			<!-- bg play -->
+			<control type="label">
+				<posx>536</posx>
+				<posy>566</posy>
+				<width>600</width>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color6</textcolor>
+			</control>
 			<control type="label">
 				<posx>535</posx>
 				<posy>565</posy>
@@ -56,6 +99,14 @@
 			</control>
 			<!-- bg forward -->
 			<control type="label">
+				<posx>622</posx>
+				<posy>566</posy>
+				<width>600</width>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color6</textcolor>
+			</control>
+			<control type="label">
 				<posx>621</posx>
 				<posy>565</posy>
 				<width>600</width>
@@ -65,6 +116,13 @@
 			</control>
 			<!-- bg next -->
 			<control type="label">
+				<posx>708</posx>
+				<posy>566</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color6</textcolor>
+			</control>
+			<control type="label">
 				<posx>707</posx>
 				<posy>565</posy>
 				<label>+</label>
@@ -72,6 +130,13 @@
 				<textcolor>Color4</textcolor>
 			</control>
 			<!-- bg stop -->
+			<control type="label">
+				<posx>795</posx>
+				<posy>566</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color6</textcolor>
+			</control>
 			<control type="label">
 				<posx>794</posx>
 				<posy>565</posy>
@@ -81,6 +146,13 @@
 			</control>
 			<!-- bg dvd -->
 			<control type="label">
+				<posx>939</posx>
+				<posy>566</posy>
+				<label>+</label>
+				<font>osdBg</font>
+				<textcolor>Color4</textcolor>
+			</control>
+			<control type="label">
 				<posx>938</posx>
 				<posy>565</posy>
 				<label>+</label>
@@ -88,6 +160,13 @@
 				<textcolor>Color6</textcolor>
 			</control>
 			<!-- bg duration -->
+			<control type="label">
+				<posx>1085</posx>
+				<posy>587</posy>
+				<label>=</label>
+				<font>osdBg</font>
+				<textcolor>Color4</textcolor>
+			</control>
 			<control type="label">
 				<posx>1084</posx>
 				<posy>586</posy>
@@ -105,7 +184,7 @@
 				<width>1320</width>
 				<align>right</align>
 				<label>$INFO[Player.Time]</label>
-				<textcolor>Color1</textcolor>
+				<textcolor>ivory3</textcolor>
 			</control>
 			<control type="label" id="1">
 				<posx>1243</posx>
@@ -113,7 +192,7 @@
 				<width>1320</width>
 				<align>right</align>
 				<label>$INFO[Player.Duration]</label>
-				<textcolor>Color1</textcolor>
+				<textcolor>ivory3</textcolor>
 			</control>
 		</control>
 		<control type="group" id="200">
@@ -122,39 +201,39 @@
 			<visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<include>state_OSD</include>
 			<control type="button" id="700">
-				<posx>-69</posx>
+				<posx>-73</posx>
 				<posy>-1</posy>
 				<width>120</width>
 				<height>48</height>
 				<label>FAVORITES</label>
-				<font>plot</font>
-				<textcolor>Color1</textcolor>
+				<font>petitaMedium</font>
+				<textcolor>ivory3</textcolor>
 				<focusedcolor>Color5</focusedcolor>
 				<onleft>709</onleft>
 				<onright>701</onright>
 				<onclick>ActivateWindow(125)</onclick>
 			</control>
 			<control type="button" id="701">
-				<posx>95</posx>
+				<posx>90</posx>
 				<posy>-1</posy>
 				<width>100</width>
 				<height>48</height>
 				<label>AUDIO</label>
-				<font>plot</font>
-				<textcolor>Color1</textcolor>
+				<font>petitaMedium</font>
+				<textcolor>ivory3</textcolor>
 				<focusedcolor>Color5</focusedcolor>
 				<onleft>700</onleft>
 				<onright>702</onright>
 				<onclick>ActivateWindow(124)</onclick>
 			</control>
 			<control type="button" id="702">
-				<posx>183</posx>
+				<posx>178</posx>
 				<posy>-1</posy>
 				<width>100</width>
 				<height>48</height>
 				<label>VIDEO</label>
-				<font>plot</font>
-				<textcolor>Color1</textcolor>
+				<font>petitaMedium</font>
+				<textcolor>ivory3</textcolor>
 				<focusedcolor>Color5</focusedcolor>
 				<onleft>701</onleft>
 				<onright>703</onright>
@@ -166,21 +245,21 @@
 				<width>48</width>
 				<height>48</height>
 				<label>PREV</label>
-				<font>plot</font>
-				<textcolor>Color1</textcolor>
+				<font>petitaMedium</font>
+				<textcolor>ivory3</textcolor>
 				<focusedcolor>Color5</focusedcolor>
 				<onleft>702</onleft>
 				<onright>704</onright>
 				<onclick>PlayerControl(Previous)</onclick>
 			</control>
 			<control type="button" id="704">
-				<posx>420</posx>
+				<posx>415</posx>
 				<posy>-1</posy>
 				<width>48</width>
 				<height>48</height>
 				<label>RWD</label>
-				<font>plot</font>
-				<textcolor>Color1</textcolor>
+				<font>petitaMedium</font>
+				<textcolor>ivory3</textcolor>
 				<focusedcolor>Color5</focusedcolor>
 				<onleft>703</onleft>
 				<onright>705</onright>
@@ -194,9 +273,9 @@
 				<align>center</align>
 				<label>PLAY</label>
 				<altlabel>PAUSE</altlabel>
-				<font>plot</font>
-				<textcolor>Color1</textcolor>
-				<alttextcolor>Color1</alttextcolor>
+				<font>petitaMedium</font>
+				<textcolor>ivory3</textcolor>
+				<alttextcolor>ivory3</alttextcolor>
 				<focusedcolor>Color5</focusedcolor>
 				<onleft>704</onleft>
 				<onright>706</onright>
@@ -208,21 +287,21 @@
 				<width>48</width>
 				<height>48</height>
 				<label>FWD</label>
-				<font>plot</font>
-				<textcolor>Color1</textcolor>
+				<font>petitaMedium</font>
+				<textcolor>ivory3</textcolor>
 				<focusedcolor>Color5</focusedcolor>
 				<onleft>705</onleft>
 				<onright>707</onright>
 				<onclick>PlayerControl(Forward)</onclick>
 			</control>
 			<control type="button" id="707">
-				<posx>675</posx>
+				<posx>670</posx>
 				<posy>-1</posy>
 				<width>48</width>
 				<height>48</height>
 				<label>NEXT</label>
-				<font>plot</font>
-				<textcolor>Color1</textcolor>
+				<font>petitaMedium</font>
+				<textcolor>ivory3</textcolor>
 				<focusedcolor>Color5</focusedcolor>
 				<onleft>706</onleft>
 				<onright>708</onright>
@@ -234,21 +313,21 @@
 				<width>48</width>
 				<height>48</height>
 				<label>STOP</label>
-				<font>plot</font>
-				<textcolor>Color1</textcolor>
+				<font>petitaMedium</font>
+				<textcolor>ivory3</textcolor>
 				<focusedcolor>Color5</focusedcolor>
 				<onleft>707</onleft>
 				<onright>709</onright>
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="button" id="709">
-				<posx>908</posx>
+				<posx>906</posx>
 				<posy>-1</posy>
 				<width>48</width>
 				<height>48</height>
 				<label>DVD</label>
-				<font>plot</font>
-				<textcolor>Color1</textcolor>
+				<font>petitaMedium</font>
+				<textcolor>ivory3</textcolor>
 				<focusedcolor>Color5</focusedcolor>
 				<onleft>708</onleft>
 				<onright>700</onright>

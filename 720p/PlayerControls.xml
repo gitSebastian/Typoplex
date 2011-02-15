@@ -88,7 +88,7 @@
 					<align>left</align>
 					<font>small</font>
 					<label>$INFO[Player.Time]</label>
-					<textcolor>Color1</textcolor>
+					<textcolor>ivory3</textcolor>
 				</control>
 				<control type="label" id="1">
 					<posx>10</posx>
@@ -97,7 +97,7 @@
 					<align>left</align>
 					<font>small</font>
 					<label>$INFO[Player.Duration]</label>
-					<textcolor>Color1</textcolor>
+					<textcolor>ivory3</textcolor>
 				</control>
 				<!-- shuffle -->
 				<control type="button" id="20">
@@ -108,28 +108,28 @@
 					<onleft>19</onleft>
 					<onright>13</onright>
 					<label>SHUFFLE</label>
-					<font>plot</font>
-					<textcolor>Color1</textcolor>
+					<font>petitaMedium</font>
+					<textcolor>ivory3</textcolor>
 					<focusedcolor>Color5</focusedcolor>
 					<onclick>XBMC.PlayerControl(Random)</onclick>
 				</control>
 				<control type="group">
 					<posy>-11</posy>
-					<posx>235</posx>
+					<posx>245</posx>
 					<control type="label">
 						<width>48</width>
 						<height>48</height>
-						<label>OFF</label>
-						<font>plot</font>
-						<textcolor>Color1</textcolor>
+						<label>off</label>
+						<font>petitaMedium</font>
+						<textcolor>ivory3</textcolor>
 						<visible>!Playlist.IsRandom</visible>
 					</control>
 					<control type="label">
 						<width>48</width>
 						<height>48</height>
-						<label>ON</label>
-						<font>plot</font>
-						<textcolor>Color1</textcolor>
+						<label>on</label>
+						<font>petitaMedium</font>
+						<textcolor>ivory3</textcolor>
 						<visible>Playlist.IsRandom</visible>
 					</control>
 				</control>
@@ -141,21 +141,21 @@
 					<onleft>20</onleft>
 					<onright>14</onright>
 					<label>PREV</label>
-					<font>plot</font>
-					<textcolor>Color1</textcolor>
+					<font>petitaMedium</font>
+					<textcolor>ivory3</textcolor>
 					<focusedcolor>Color5</focusedcolor>
 					<onclick>PlayerControl(Previous)</onclick>
 				</control>
 				<control type="button" id="14">
-					<posx>420</posx>
+					<posx>415</posx>
 					<posy>0</posy>
 					<width>48</width>
 					<height>48</height>
 					<onleft>13</onleft>
 					<onright>15</onright>
 					<label>RWD</label>
-					<font>plot</font>
-					<textcolor>Color1</textcolor>
+					<font>petitaMedium</font>
+					<textcolor>ivory3</textcolor>
 					<focusedcolor>Color5</focusedcolor>
 					<onclick>PlayerControl(Rewind)</onclick>
 				</control>
@@ -169,9 +169,9 @@
 					<align>center</align>
 					<label>PLAY</label>
 					<altlabel>PAUSE</altlabel>
-					<font>plot</font>
-					<textcolor>Color1</textcolor>
-					<alttextcolor>Color1</alttextcolor>
+					<font>petitaMedium</font>
+					<textcolor>ivory3</textcolor>
+					<alttextcolor>ivory3</alttextcolor>
 					<focusedcolor>Color5</focusedcolor>
 					<onclick>PlayerControl(Play)</onclick>
 				</control>
@@ -181,34 +181,34 @@
 					<width>48</width>
 					<height>48</height>
 					<label>FWD</label>
-					<font>plot</font>
-					<textcolor>Color1</textcolor>
+					<font>petitaMedium</font>
+					<textcolor>ivory3</textcolor>
 					<focusedcolor>Color5</focusedcolor>
 					<onleft>15</onleft>
 					<onright>17</onright>
 					<onclick>PlayerControl(Forward)</onclick>
 				</control>
 				<control type="button" id="17">
-					<posx>675</posx>
+					<posx>670</posx>
 					<posy>0</posy>
 					<width>48</width>
 					<height>48</height>
 					<label>NEXT</label>
-					<font>plot</font>
-					<textcolor>Color1</textcolor>
+					<font>petitaMedium</font>
+					<textcolor>ivory3</textcolor>
 					<focusedcolor>Color5</focusedcolor>
 					<onleft>16</onleft>
 					<onright>18</onright>
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
 				<control type="button" id="18">
-					<posx>761</posx>
+					<posx>759</posx>
 					<posy>0</posy>
 					<width>48</width>
 					<height>48</height>
 					<label>STOP</label>
-					<font>plot</font>
-					<textcolor>Color1</textcolor>
+					<font>petitaMedium</font>
+					<textcolor>ivory3</textcolor>
 					<focusedcolor>Color5</focusedcolor>
 					<onleft>17</onleft>
 					<onright>19</onright>
@@ -223,36 +223,36 @@
 					<onleft>18</onleft>
 					<onright>20</onright>
 					<label>REPEAT</label>
-					<font>plot</font>
-					<textcolor>Color1</textcolor>
+					<font>petitaMedium</font>
+					<textcolor>ivory3</textcolor>
 					<focusedcolor>Color5</focusedcolor>
 					<onclick>XBMC.PlayerControl(Repeat)</onclick>
 				</control>
 				<control type="group">
 					<posy>-11</posy>
-					<posx>949</posx>
+					<posx>952</posx>
 					<control type="label">
 						<width>48</width>
 						<height>48</height>
-						<label>OFF</label>
-						<font>plot</font>
-						<textcolor>Color1</textcolor>
+						<label>off</label>
+						<font>petitaMedium</font>
+						<textcolor>ivory3</textcolor>
 						<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 					</control>
 					<control type="label">
 						<width>48</width>
 						<height>48</height>
-						<label>ONE</label>
-						<font>plot</font>
-						<textcolor>Color1</textcolor>
+						<label>one</label>
+						<font>petitaMedium</font>
+						<textcolor>ivory3</textcolor>
 						<visible>Playlist.IsRepeatOne</visible>
 					</control>
 					<control type="label">
 						<width>48</width>
 						<height>48</height>
-						<label>ALL</label>
-						<font>plot</font>
-						<textcolor>Color1</textcolor>
+						<label>all</label>
+						<font>petitaMedium</font>
+						<textcolor>ivory3</textcolor>
 						<visible>Playlist.IsRepeat</visible>
 					</control>
 				</control>

@@ -3,18 +3,27 @@
 	<animation effect="fade" start="0" end="100" time="1000" reversible="true">WindowOpen</animation>
 	<animation effect="fade" start="100" end="0" time="1000" reversible="true">WindowClose</animation>
 	<controls>
+		<include>allscreens</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>white.png</texture>
+			<colordiffuse>deepRed</colordiffuse>
+		</control>
 		<control type="label">
-			<posx>100</posx>
-			<posy>400</posy>
+			<posx>-50</posx>
+			<posy>330</posy>
 			<width>130000</width>
 			<align>left</align>
-			<font>offsetHuge</font>
+			<font>offsetHuge2</font>
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<textcolor>Color4</textcolor>
+			<textcolor>orange</textcolor>
 			<!-- there is a space after the label so the char won't be cut off, leave it untouched -->
-			<label>.$INFO[MusicPlayer.Title] </label>
+			<label>$INFO[MusicPlayer.Title] </label>
 			<!-- transparency is used instead of darker color, for see-through effect -->
 			<animation effect="fade" start="10" end="20" condition="true">Conditional</animation>
 		</control>
@@ -187,17 +196,6 @@
 				<posy>603</posy>
 			</control>
 		</control>
-		<control type="label" id="200">
-			<posy>9</posy>
-			<posx>25r</posx>
-			<width>400</width>
-			<align>right</align>
-			<height>40</height>
-			<font>geoMiddle</font>
-			<aligny>center</aligny>
-			<textcolor>Color1</textcolor>
-			<include>transition2</include>
-			<label>[COLOR=Color4]$INFO[System.Date][/COLOR] $INFO[System.Time]</label>
-		</control>
+		<include>libClock</include>
 	</controls>
 </window>

@@ -7,6 +7,7 @@
 		<posy>100</posy>
 	</coordinates>
 	<include>dialogOpen</include>
+	<include file="Includes.xml">-</include>
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="97" end="50" time="500" condition="Window.IsActive(103)">Conditional</animation>

@@ -24,7 +24,7 @@
 			<posy>400</posy>
 			<width>1300</width>
 			<align>left</align>
-			<font>offsetHuge</font>
+			<font>offsetHuge2</font>
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>fade80</include>

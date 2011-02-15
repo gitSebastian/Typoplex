@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <fonts>
 	<fontset id="Default" unicode="true">
 		<!-- TYPOPLEX FONTS -->
@@ -7,29 +8,9 @@
 			<size>200</size>
 		</font>
 		<font>
-			<name>georgiaBigTitle</name>
-			<filename>Georgia.ttf</filename>
-			<size>40</size>
-		</font>
-		<font>
-			<name>NeutonBigTitle</name>
-			<filename>Neuton.ttf</filename>
-			<size>40</size>
-		</font>
-		<font>
-			<name>NeutonBigTitle2</name>
-			<filename>Neuton.ttf</filename>
-			<size>36</size>
-		</font>
-		<font>
-			<name>offsetHuge</name>
-			<filename>ChopinScript.ttf</filename>
-			<size>700</size>
-		</font>
-		<font>
-			<name>playerTime</name>
-			<filename>ChopinScript.ttf</filename>
-			<size>140</size>
+			<name>offsetHuge2</name>
+			<filename>OLHOBOITRIAL2011.ttf</filename>
+			<size>500</size>
 		</font>
 		<font>
 			<name>osdBg</name>
@@ -41,85 +22,60 @@
 			<filename>Bauhaus93.ttf</filename>
 			<size>700</size>
 		</font>
-		<font>
-			<name>logoBigger</name>
-			<filename>Bauhaus93.ttf</filename>
-			<size>720</size>
-		</font>
-		<font>
-			<name>logoMedium</name>
-			<filename>Bauhaus93.ttf</filename>
-			<size>300</size>
-		</font>
-		<font>
-			<name>logoSmall</name>
-			<filename>Bauhaus93.ttf</filename>
-			<size>50</size>
-		</font>
-		<font>
-			<name>logoText</name>
-			<filename>Georgia.ttf</filename>
-			<size>130</size>
-		</font>
+		<!-- in "full info" window -->
 		<font>
 			<name>caviarHuge</name>
 			<filename>CaviarDreams.ttf</filename>
 			<size>100</size>
 		</font>
 		<font>
-			<name>regularTV</name>
-			<filename>Georgia.ttf</filename>
-			<size>28</size>
-		</font>
-		<font>
-			<name>plot</name>
-			<filename>Regular.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>mavenMiddle</name>
-			<filename>MavenPro.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>bauhausMedium</name>
-			<filename>Bauhaus.ttf</filename>
-			<size>20</size>
+			<name>geoBig</name>
+			<filename>GeosansLight.ttf</filename>
+			<size>60</size>
 		</font>
 		<font>
 			<name>geoMiddle</name>
 			<filename>GeoSansLight.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>geoSmall</name>
+			<filename>GeosansLight.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
-			<name>bauhausNormal</name>
-			<filename>Bauhaus.ttf</filename>
-			<size>20</size>
+			<name>petitaBig</name>
+			<filename>PetitaMedium.ttf</filename>
+			<size>36</size>
 		</font>
 		<font>
-			<name>bauhausMedium</name>
+			<name>petitaMedium</name>
+			<filename>PetitaMedium.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>petitaSmall</name>
+			<filename>PetitaMedium.ttf</filename>
+			<size>16</size>
+		</font>
+		<font>
+			<name>bauhausHomeMenu</name>
 			<filename>Bauhaus.ttf</filename>
-			<size>30</size>
+			<size>20</size>
 		</font>
 		<!-- END TYPOPLEX FONTS -->
-<!-- pagelabels ----------------------------------------------------->
+		<!-- pagelabels -->
 		<font>
 			<name>special</name>
 			<filename>Light.ttf</filename>
 			<size>52</size>
 			<aspect>0.95</aspect>
 		</font>
-		
-<!-- dialogvideoinfo ----------------------------------------------------->		
+		<!-- dialogvideoinfo -->
 		<font>
 			<name>special6</name>
 			<filename>RegularCaps.ttf</filename>
 			<size>22</size>
-		</font>
-		<font>
-			<name>special7</name>
-			<filename>RegularOrg.ttf</filename>
-			<size>24</size>
 		</font>
 		<font>
 			<name>special5</name>
@@ -136,14 +92,12 @@
 			<filename>LightAlt.ttf</filename>
 			<size>26</size>
 		</font>
-		
 		<font>
 			<name>special3</name>
 			<filename>LightAlt.ttf</filename>
 			<size>28</size>
 		</font>
-
-<!-- pagemenu ----------------------------------------------------->			
+		<!-- pagemenu -->
 		<font>
 			<name>pagemenu</name>
 			<filename>ZegoeLight-U-L.ttf</filename>
@@ -155,8 +109,7 @@
 			<style>bold</style>
 			<size>22</size>
 		</font>
-	
-<!-- settings ------------------------------------------------>
+		<!-- settings -->
 		<font>
 			<name>category</name>
 			<filename>ZegoeLight-U-L.ttf</filename>
@@ -172,27 +125,18 @@
 			<filename>Light.ttf</filename>
 			<size>42</size>
 		</font>
-
-
-<!-- home screen menu --------------------------------------------->	
+		<!-- home screen menu -->
 		<font>
 			<name>homeMenu</name>
 			<filename>Light.ttf</filename>
 			<size>55</size>
 		</font>
-		<!--<font>
-			<name>homeMenuFocus</name>
-			<filename>Light.ttf</filename>
-			<size>80</size>
-		</font>-->
 		<font>
 			<name>homeMenuInfo</name>
 			<filename>Light.ttf</filename>
 			<size>42</size>
 		</font>
-
-
-<!-- general ------------------------------------------------------>
+		<!-- general -->
 		<font>
 			<name>normal</name>
 			<filename>RegularOrg.ttf</filename>
@@ -224,24 +168,23 @@
 			<filename>RegularCaps.ttf</filename>
 			<size>20</size>
 		</font>
-
-<!-- Added Capitalisation option: Courtesy of Se.bastian -->
+		<!-- Added Capitalisation option: Courtesy of Se.bastian -->
 		<font>
 			<name>mediumNormal</name>
 			<filename>Regular.ttf</filename>
 			<size>20</size>
 		</font>
-<!-- End Capitalisation addition -->
+		<!-- End Capitalisation addition -->
 		<font>
 			<name>mediumLow</name>
 			<filename>RegularLow.ttf</filename>
 			<size>20</size>
 		</font>
-        <font>
+		<font>
 			<name>mediumLowBold</name>
 			<filename>RegularLow.ttf</filename>
 			<size>20</size>
-            <style>bold</style>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>big</name>
@@ -253,27 +196,24 @@
 			<filename>RegularLow.ttf</filename>
 			<size>28</size>
 		</font>
-<!-- Added Capitalization option: Courtesy of Se.bastian -->
-        <font>
+		<!-- Added Capitalization option: Courtesy of Se.bastian -->
+		<font>
 			<name>bigLow1</name>
 			<filename>RegularOrg.ttf</filename>
 			<size>28</size>
 		</font>
-<!-- End Capitalization addition -->
+		<!-- End Capitalization addition -->
 		<font>
 			<name>bigCaps</name>
 			<filename>RegularCaps.ttf</filename>
 			<size>28</size>
 		</font>
-		
 		<font>
 			<name>smallCaps</name>
 			<filename>RegularCaps.ttf</filename>
 			<size>18</size>
 		</font>
-
-
-<!-- dialogs ------------------------------------------------------>	
+		<!-- dialogs -->
 		<font>
 			<name>dialog1</name>
 			<filename>RegularLow.ttf</filename>
@@ -285,9 +225,8 @@
 			<filename>RegularLow.ttf</filename>
 			<size>20</size>
 		</font>
-        
-<!-- Added Capitalisation option: Courtesy of Se.bastian -->
-        <font>
+		<!-- Added Capitalisation option: Courtesy of Se.bastian -->
+		<font>
 			<name>dialog11</name>
 			<filename>Regular.ttf</filename>
 			<size>28</size>
@@ -298,10 +237,8 @@
 			<filename>Regular.ttf</filename>
 			<size>20</size>
 		</font>
-<!-- End Capitalization addition -->
-
-
-<!-- osd ------------------------------------------------------>	
+		<!-- End Capitalization addition -->
+		<!-- osd -->
 		<font>
 			<name>osd1</name>
 			<filename>LightCaps.ttf</filename>
@@ -317,14 +254,7 @@
 			<filename>RegularCaps.ttf</filename>
 			<size>20</size>
 		</font>
-    
-
-<!--- ORIGINALS FOR SCRIPT REFERENCE/LEGACY ---------------------------------------->
-		<font>
-			<name>font101</name>
-			<filename>ZegoeUI-U-L.ttf</filename>
-			<size>14</size>
-		</font>
+		<!-- ORIGINALS FOR SCRIPT REFERENCE/LEGACY -->
 		<font>
 			<name>font10</name>
 			<filename>ZegoeUI-U-L.ttf</filename>
@@ -342,127 +272,5 @@
 			<filename>ZegoeUI-U-L.ttf</filename>
 			<size>17</size>
 		</font>
-		<font>
-			<name>special12</name>
-			<filename>ZegoeUI-U-L.ttf</filename>
-			<size>19</size>
-		</font>
-		<font>
-			<name>special13</name>
-			<filename>ZegoeUI-U-L.ttf</filename>
-			<size>19</size>
-			<style>bold</style>
-		</font>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<!--<font>
-			<name>smallLow</name>
-			<filename>ZegoeUI-U-L.ttf</filename>
-			<size>18</size>
-		</font>-->
-		
-		<!---->
-		
-		<!---->
-		
-		<!--<font>
-			<name>listLow</name>
-			<filename>ZegoeUI-U-L.ttf</filename>
-			<size>24</size>
-		</font>-->
-		
-		<!--<font>
-			<name>xbigLow</name>
-			<filename>ZegoeUI-U-L.ttf</filename>
-			<size>36</size>
-		</font>-->
-
-		<!---->
-		
-		
-		<!-- visualisation -----------------------------------------		
-		<font>
-			<name>vis1</name>
-			<filename>BoldCaps.ttf</filename>
-			<size>34</size>
-		</font>
-		<font>
-			<name>vis2</name>
-			<filename>LightCaps.ttf</filename>
-			<size>26</size>
-		</font>
-		<font>
-			<name>vis3</name>
-			<filename>LightCaps.ttf</filename>
-			<size>20</size>
-		</font>---->
-		
-		
-		<!--<font>
-			<name>lyrics</name>
-			<filename>Light.ttf</filename>
-			<size>28</size>
-		</font>-->
-		
-		<!--<font>
-			<name>vis4</name>
-			<filename>ZegoeUI-UBold.ttf</filename>
-			<size>200</size>
-		</font>-->
-		
-		
-		<!---->
-		
-		
-		<!-- fat titleheader --------------------------------------------	
-		<font>
-			<name>special4</name>
-			<filename>ZegoeUI-U-L.ttf</filename>
-			<size>32</size>
-		</font>---->
-
-<!-- obsolete --------------------------------------------------	
-		----->
-
-<!-- subheader ----------------------------------------------
-		-------->
-
-<!-- now playing screen artist -------------------------------------------	
-		-------->
-
-<!-- now playing screen title --------------------------------------------
-		<font>
-			<name>special8</name>
-			<filename>ZegoeLight-U.ttf</filename>
-			<size>250</size>
-		</font>-------->
-
-<!-- now playing screen album ---------------------------------------------	
-		<font>
-			<name>special9</name>
-			<filename>ZegoeLight-U.ttf</filename>
-			<size>55</size>
-		</font>------->
-
-<!-- ????????? ----------------------------------------------	
-		<font>
-			<name>special10</name>
-			<filename>ZegoeCapsBold.ttf</filename>
-			<size>180</size>
-		</font>
-		<font>
-			<name>special11</name>
-			<filename>ZegoeLight-U-L.ttf</filename>
-			<size>34</size>
-		</font>----->
-		
 	</fontset>
 </fonts>
