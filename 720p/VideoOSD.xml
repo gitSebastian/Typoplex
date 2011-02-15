@@ -7,13 +7,6 @@
 			<include>state_OSD</include>
 			<!-- bg favorites -->
 			<control type="label">
-				<posx>-9</posx>
-				<posy>566</posy>
-				<label>+</label>
-				<font>osdBg</font>
-				<textcolor>Color4</textcolor>
-			</control>
-			<control type="label">
 				<posx>-10</posx>
 				<posy>565</posy>
 				<label>+</label>
@@ -22,13 +15,6 @@
 			</control>
 			<!-- bg audio -->
 			<control type="label">
-				<posx>134</posx>
-				<posy>566</posy>
-				<label>+</label>
-				<font>osdBg</font>
-				<textcolor>Color4</textcolor>
-			</control>
-			<control type="label">
 				<posx>133</posx>
 				<posy>565</posy>
 				<label>+</label>
@@ -36,13 +22,6 @@
 				<textcolor>Color6</textcolor>
 			</control>
 			<!-- bg video -->
-			<control type="label">
-				<posx>220</posx>
-				<posy>566</posy>
-				<label>+</label>
-				<font>osdBg</font>
-				<textcolor>Color4</textcolor>
-			</control>
 			<control type="label">
 				<posx>219</posx>
 				<posy>565</posy>
@@ -146,13 +125,6 @@
 			</control>
 			<!-- bg dvd -->
 			<control type="label">
-				<posx>939</posx>
-				<posy>566</posy>
-				<label>+</label>
-				<font>osdBg</font>
-				<textcolor>Color4</textcolor>
-			</control>
-			<control type="label">
 				<posx>938</posx>
 				<posy>565</posy>
 				<label>+</label>
@@ -160,13 +132,6 @@
 				<textcolor>Color6</textcolor>
 			</control>
 			<!-- bg duration -->
-			<control type="label">
-				<posx>1085</posx>
-				<posy>587</posy>
-				<label>=</label>
-				<font>osdBg</font>
-				<textcolor>Color4</textcolor>
-			</control>
 			<control type="label">
 				<posx>1084</posx>
 				<posy>586</posy>
