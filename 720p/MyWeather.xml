@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<!--ReFocus-->
+<window id="2600">
+	<defaultcontrol always="true">8000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>allscreens</include>
+		
+		<control type="label">
+			<posx>700</posx>
+			<posy>250</posy>
+			<width>10000</width>
+			<align>left</align>
+			<font>offsetHuge2</font>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<textcolor>orange</textcolor>
+			<!-- there is a space after the label so the char won't be cut off, leave it untouched -->
+			<label>$INFO[Weather.Temperature]</label>
+			<!-- transparency is used instead of darker color, for see-through effect -->
+			<animation effect="fade" start="10" end="20" condition="true">Conditional</animation>
+		</control>
+		<!-- fake info trigger button -->
+		<control type="button" id="8000">
+			<label>SHOULD NOT SEE ME</label>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<onleft>300</onleft>
+			<onright>53</onright>
+			<width>200</width>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+
+		<!-- THE WEATHER -->
+		<control type="group" id="5000">
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<onleft>300</onleft>
+				<control type="group">
+					<posy>250</posy>
+					<posx>250</posx>
+					<!-- TODAY -->
+					<control type="grouplist">
+						<posy>-50</posy>
+						<posx>-100</posx>
+						<height>90</height>
+						<aligny>top</aligny>
+						<orientation>horizontal</orientation>
+						<itemgap>20</itemgap>
+					<control type="label">
+						<posx>-50</posx>
+						<posy>0</posy>
+						<label>$INFO[Weather.Location]</label>
+						<align>left</align>
+						<height>90</height>
+						<width min="5" max="500">auto</width>
+						<font>bauhausHomeMenu</font>
+						<aligny>top</aligny>
+						<textcolor>orange</textcolor>
+						<include>transition2</include>
+						<include>notification</include>
+					</control>
+					<control type="label" id="11">
+						<posx>0</posx>
+						<posy>0</posy>
+						<align>left</align>
+						<height>90</height>
+						<width min="5" max="500">auto</width>
+						<font>bauhausHomeMenu</font>
+						<aligny>top</aligny>
+						<textcolor>ivory3</textcolor>
+						<include>transition2</include>
+						<include>notification</include>
+					</control>
+					</control>
+					<!-- TODAY -->
+					<control type="grouplist">
+						<posy>50</posy>
+						<posx>0</posx>
+						<height>90</height>
+						<aligny>top</aligny>
+						<orientation>horizontal</orientation>
+						<itemgap>20</itemgap>
+						<control type="label">
+							<label>$LOCALIZE[33006] </label>
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>ivory3</textcolor>
+							<width min="5" max="500">auto</width>
+						</control>
+						<control type="label" id="22">
+							<width min="5" max="500">auto</width>
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>orange</textcolor>
+						</control>
+						<control type="label" id="23">
+							<width min="5" max="500">auto</width>
+							<height>90</height>
+							<align>left</align>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>ivory3</textcolor>
+						</control>						
+					</control>
+					<!-- DAY 1 -->
+					<control type="grouplist">
+						<posy>100</posy>
+						<posx>50</posx>
+						<height>90</height>
+						<aligny>top</aligny>
+						<orientation>horizontal</orientation>
+						<itemgap>20</itemgap>
+						<control type="label" id="41">
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>ivory3</textcolor>
+							<width min="5" max="500">auto</width>
+						</control>
+						<control type="label" id="44">
+							<width min="5" max="500">auto</width>
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>orange</textcolor>
+						</control>
+						<control type="label" id="43">
+							<width min="5" max="500">auto</width>
+							<height>90</height>
+							<align>left</align>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>ivory3</textcolor>
+						</control>
+						<control type="label">
+							<label>/</label>
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>orange</textcolor>
+							<width min="5" max="500">auto</width>
+						</control>
+						<control type="label" id="42">
+							<width min="5" max="500">auto</width>
+							<height>90</height>
+							<align>left</align>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>ivory3</textcolor>
+						</control>						
+					</control>
+					<!-- DAY 2 -->
+					<control type="grouplist">
+						<posy>150</posy>
+						<posx>100</posx>
+						<height>90</height>
+						<aligny>top</aligny>
+						<orientation>horizontal</orientation>
+						<itemgap>20</itemgap>
+						<control type="label" id="51">
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>ivory3</textcolor>
+							<width min="5" max="500">auto</width>
+						</control>
+						<control type="label" id="54">
+							<width min="5" max="500">auto</width>
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>orange</textcolor>
+						</control>
+						<control type="label" id="53">
+							<width min="5" max="500">auto</width>
+							<height>90</height>
+							<align>left</align>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>ivory3</textcolor>
+						</control>
+						<control type="label">
+							<label>/</label>
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>orange</textcolor>
+							<width min="5" max="500">auto</width>
+						</control>
+						<control type="label" id="52">
+							<width min="5" max="500">auto</width>
+							<height>90</height>
+							<align>left</align>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>ivory3</textcolor>
+						</control>						
+					</control>
+					<!-- DAY 3 -->
+					<control type="grouplist">
+						<posy>200</posy>
+						<posx>150</posx>
+						<height>90</height>
+						<aligny>top</aligny>
+						<orientation>horizontal</orientation>
+						<itemgap>20</itemgap>
+						<control type="label" id="61">
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>ivory3</textcolor>
+							<width min="5" max="500">auto</width>
+						</control>
+						<control type="label" id="64">
+							<width min="5" max="500">auto</width>
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>orange</textcolor>
+						</control>
+						<control type="label" id="63">
+							<width min="5" max="500">auto</width>
+							<height>90</height>
+							<align>left</align>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>ivory3</textcolor>
+						</control>
+						<control type="label">
+							<label>/</label>
+							<height>90</height>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>orange</textcolor>
+							<width min="5" max="500">auto</width>
+						</control>
+						<control type="label" id="62">
+							<width min="5" max="500">auto</width>
+							<height>90</height>
+							<align>left</align>
+							<aligny>top</aligny>
+							<font>bauhausHomeMenu</font>
+							<textcolor>ivory3</textcolor>
+						</control>						
+					</control>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>361</posy>
+					<height>32</height>
+					<width>32</width>
+					<include>scrollLeftView</include>
+				</control>
+		</control>
+		<include>WeatherMenu</include>
+		<!-- END OF THE ORIGINAL CONTENT -->
+	</controls>
+</window>

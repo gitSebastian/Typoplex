@@ -169,7 +169,7 @@
 				<label>T</label>
 				<font>bauhausBackTitle</font>
 				<textcolor>Color6</textcolor>
-				<animation effect="fade" start="50" end="27" condition="true">Conditional</animation>
+				<animation effect="fade" start="50" end="15" condition="true">Conditional</animation>
 			</control>
 			<control type="label">
 				<posy>350</posy>
@@ -196,7 +196,7 @@
 				<label>POPLEX</label>
 				<font>bauhausBackTitle</font>
 				<textcolor>Color6</textcolor>
-				<animation effect="fade" start="50" end="27" condition="true">Conditional</animation>
+				<animation effect="fade" start="50" end="15" condition="true">Conditional</animation>
 			</control>
 			<control type="label">
 				<posy>210</posy>

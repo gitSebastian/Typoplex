@@ -126,7 +126,7 @@
 				<onright>300</onright>
 				<onleft>300</onleft>
 				<label>$LOCALIZE[8]</label>
-				<onclick>ActivateWindow(weathersettings)</onclick>
+				<onclick>ActivateWindow(2600)</onclick>
 				<font>bauhausHomeMenu</font>
 				<textcolor>Color4</textcolor>
 				<focusedcolor>orange</focusedcolor>
@@ -435,6 +435,14 @@
 					<description>go to Plex System Settings</description>
 					<label>System</label>
 					<onclick>ActivateWindow(systemsettings)</onclick>
+					<font>bauhausHomeMenu</font>
+					<textcolor>Color4</textcolor>
+					<focusedcolor>orange</focusedcolor>
+				</control>
+				<control type="button" id="267">
+					<description>go to Weather Settings</description>
+					<label>Weather</label>
+					<onclick>ActivateWindow(weathersettings)</onclick>
 					<font>bauhausHomeMenu</font>
 					<textcolor>Color4</textcolor>
 					<focusedcolor>orange</focusedcolor>
